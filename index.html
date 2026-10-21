@@ -69,78 +69,55 @@
 
 <main>
 
-  <section class="how" id="how" aria-labelledby="how-title">
+  <section class="how-wrap board" id="how" aria-labelledby="how-title">
+    <h2 id="how-title" class="section-title" data-rise>How Kiln will work</h2>
+    <div class="how">
     <div class="field field--1">
-      <h2 id="how-title" class="field__title" data-rise>How Kiln will work</h2>
+      <figure class="field__photo"><img src="img/hands-create-art-pottery-wheel.jpg" width="1024" height="613" loading="lazy" alt="Wet clay rising between two hands on a potter's wheel."></figure>
+      <h3 class="field__stage" data-rise>Shape</h3>
       <div class="card" data-ui data-rise>
         <p class="card__name">Cup, stoneware</p>
-        <dl>
-          <div><dt>Mesh</dt><dd>1,184 triangles</dd></div>
-          <div><dt>UV map</dt><dd>None yet</dd></div>
-          <div><dt>Texture</dt><dd>None</dd></div>
-        </dl>
+        <dl><div><dt>Mesh</dt><dd>1,184 triangles</dd></div><div><dt>UV map</dt><dd>None yet</dd></div><div><dt>Texture</dt><dd>None</dd></div></dl>
         <p class="card__state">Shaping</p>
       </div>
       <p class="field__clause" data-rise>First, shape it right where it stands.</p>
     </div>
     <div class="field field--2">
+      <figure class="field__photo"><img src="img/oribe-type-ewer.jpg" width="1280" height="1600" loading="lazy" alt="An Oribe ewer whose surface is divided into painted panels."></figure>
+      <h3 class="field__stage" data-rise>Unwrap</h3>
       <div class="card" data-ui data-rise>
         <p class="card__name">Cup, stoneware</p>
-        <dl>
-          <div><dt>Mesh</dt><dd>1,184 triangles</dd></div>
-          <div><dt>UV map</dt><dd>3 islands, 92% used</dd></div>
-          <div><dt>Seams</dt><dd>14 edges</dd></div>
-        </dl>
+        <dl><div><dt>Mesh</dt><dd>1,184 triangles</dd></div><div><dt>UV map</dt><dd>3 islands, 92% used</dd></div><div><dt>Seams</dt><dd>14 edges</dd></div></dl>
         <p class="card__state">Unwrapped</p>
       </div>
       <p class="field__clause" data-rise>Then open it flat and mark the seams.</p>
     </div>
     <div class="field field--3">
+      <figure class="field__photo"><img src="img/jin-jun-ware-dish-with-splashed-glazes.jpg" width="1600" height="1592" loading="lazy" alt="A Jun ware dish with pale blue glaze splashed with purple."></figure>
+      <h3 class="field__stage" data-rise>Glaze</h3>
       <div class="card" data-ui data-rise>
         <p class="card__name">Cup, stoneware</p>
-        <dl>
-          <div><dt>Base colour</dt><dd>1024 × 1024</dd></div>
-          <div><dt>Layers</dt><dd>Clay, teal glaze, rim</dd></div>
-          <div><dt>Roughness</dt><dd>0.35</dd></div>
-        </dl>
+        <dl><div><dt>Base colour</dt><dd>1024 × 1024</dd></div><div><dt>Layers</dt><dd>Clay, teal glaze, rim</dd></div><div><dt>Roughness</dt><dd>0.35</dd></div></dl>
         <p class="card__state">Glazed</p>
       </div>
       <p class="field__clause" data-rise>Then paint the glaze on the cup itself.</p>
     </div>
     <div class="field field--4">
+      <figure class="field__photo"><img src="img/kiln-pre-firing.jpg" width="1024" height="683" loading="lazy" alt="Pots stacked on shelves inside a brick kiln, ready to fire."></figure>
+      <h3 class="field__stage" data-rise>Fire</h3>
       <div class="card" data-ui data-rise>
         <p class="card__name">Cup, stoneware</p>
-        <dl>
-          <div><dt>LODs</dt><dd>4 of 4 generated</dd></div>
-          <div><dt>Physics</dt><dd>Convex hull</dd></div>
-          <div><dt>Land impact</dt><dd>1</dd></div>
-        </dl>
+        <dl><div><dt>LODs</dt><dd>4 of 4 generated</dd></div><div><dt>Physics</dt><dd>Convex hull</dd></div><div><dt>Land impact</dt><dd>1</dd></div></dl>
         <p class="card__state card__state--done">Fired, in-world</p>
       </div>
       <p class="field__clause" data-rise>Then fire it and set it on the table.</p>
+    </div>
     </div>
   </section>
 
   <section class="tools board" id="tools" aria-labelledby="tools-title">
     <h2 id="tools-title" class="section-title" data-rise>What goes in the kiln</h2>
     <div class="cells">
-
-      <article class="cell cell--text-top" data-rise>
-        <div class="cell__text">
-          <h3>Mesh editing</h3>
-          <p>Select vertices, edges or faces on the object in-world and move, extrude or cut them.</p>
-          <p class="status">In development</p>
-        </div>
-        <div class="frag frag--modes" data-ui>
-          <div class="seg" role="group" aria-label="Selection mode (example)">
-            <span>Vertex</span><span>Edge</span><span class="is-on">Face</span>
-          </div>
-          <div class="ops">
-            <span>Extrude</span><span>Inset</span><span>Loop cut</span><span>Bevel</span>
-          </div>
-          <p class="frag__note">12 faces selected</p>
-        </div>
-      </article>
 
       <article class="cell cell--frag-top cell--live" data-rise>
         <div class="frag frag--paint" data-ui>
@@ -162,8 +139,25 @@
         </div>
         <div class="cell__text">
           <h3>Texture painting</h3>
-          <p>Paint straight onto the face in-world, in layers, with base colour, roughness and emission. Try it on the tile above.</p>
+          <p>Paint straight onto the face in-world, in layers, with base colour, roughness and emission. Try it on the test tile.</p>
           <p class="status">In development</p>
+        </div>
+      </article>
+
+      <article class="cell cell--text-top" data-rise>
+        <div class="cell__text">
+          <h3>Mesh editing</h3>
+          <p>Select vertices, edges or faces on the object in-world and move, extrude or cut them.</p>
+          <p class="status">In development</p>
+        </div>
+        <div class="frag frag--modes" data-ui>
+          <div class="seg" role="group" aria-label="Selection mode (example)">
+            <span>Vertex</span><span>Edge</span><span class="is-on">Face</span>
+          </div>
+          <div class="ops">
+            <span>Extrude</span><span>Inset</span><span>Loop cut</span><span>Bevel</span>
+          </div>
+          <p class="frag__note">12 faces selected</p>
         </div>
       </article>
 
@@ -270,24 +264,33 @@
   </section>
 
   <section class="faq board" id="faq" aria-labelledby="faq-title">
-    <div class="faq__list">
-      <h2 id="faq-title" class="faq__title">Common questions</h2>
-      <ul role="list">
-        <li><button type="button" class="q" aria-expanded="true" aria-controls="a1" id="q1">Is Kiln free?</button>
-          <div class="a" id="a1" role="region" aria-labelledby="q1"><p>Yes. Kiln is free, and its source is released under LGPL-2.1, the same licence as the viewer it is built on.</p></div></li>
-        <li><button type="button" class="q" aria-expanded="false" aria-controls="a2" id="q2">When can I download it?</button>
-          <div class="a" id="a2" role="region" aria-labelledby="q2" hidden><p>There is no public build yet. Follow the Kiln organisation on GitHub to hear when the first preview is ready.</p></div></li>
-        <li><button type="button" class="q" aria-expanded="false" aria-controls="a3" id="q3">Do I have to give up Firestorm?</button>
-          <div class="a" id="a3" role="region" aria-labelledby="q3" hidden><p>No. Kiln has its own install folder, settings and cache, so it runs beside Firestorm or the official viewer.</p></div></li>
-        <li><button type="button" class="q" aria-expanded="false" aria-controls="a4" id="q4">Do I still need Blender?</button>
-          <div class="a" id="a4" role="region" aria-labelledby="q4" hidden><p>For big modelling jobs, yes. Kiln covers the changes you make between uploads, and the Blender link carries the mesh across and back.</p></div></li>
-        <li><button type="button" class="q" aria-expanded="false" aria-controls="a5" id="q5">Will painting cost upload fees?</button>
-          <div class="a" id="a5" role="region" aria-labelledby="q5" hidden><p>Painting and previewing stay on your computer. You pay Second Life’s usual fee only when you upload the finished texture or mesh.</p></div></li>
-        <li><button type="button" class="q" aria-expanded="false" aria-controls="a6" id="q6">Is Kiln made by Linden Lab?</button>
-          <div class="a" id="a6" role="region" aria-labelledby="q6" hidden><p>No. Kiln is an independent third-party viewer, built to follow Linden Lab’s Third Party Viewer Policy. It is not made or endorsed by Linden Lab.</p></div></li>
-      </ul>
+    <h2 id="faq-title" class="section-title" data-rise>Questions</h2>
+    <div class="qa-list">
+      <div class="qa" data-rise>
+        <h3>Is Kiln free?</h3>
+        <p>Yes. Kiln is free, and its source is released under LGPL-2.1, the same licence as the viewer it is built on.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>When can I download it?</h3>
+        <p>There is no public build yet. Follow the Kiln organisation on GitHub to hear when the first preview is ready.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>Do I have to give up Firestorm?</h3>
+        <p>No. Kiln has its own install folder, settings and cache, so it runs beside Firestorm or the official viewer.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>Do I still need Blender?</h3>
+        <p>For big modelling jobs, yes. Kiln covers the changes you make between uploads, and the Blender link carries the mesh across and back.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>Will painting cost upload fees?</h3>
+        <p>Painting and previewing stay on your computer. You pay Second Life’s usual fee only when you upload the finished texture or mesh.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>Is Kiln made by Linden Lab?</h3>
+        <p>No. Kiln is an independent third-party viewer, built to follow Linden Lab’s Third Party Viewer Policy. It is not made or endorsed by Linden Lab.</p>
+      </div>
     </div>
-    <div class="faq__pane" aria-hidden="true"><p class="faq__answer">Yes. Kiln is free, and its source is released under LGPL-2.1, the same licence as the viewer it is built on.</p></div>
   </section>
 
   <section class="cta board" aria-labelledby="cta-title">
@@ -327,7 +330,7 @@
       <li><a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">Licence</a></li>
     </ul>
     <p class="footer__legal">Kiln is an independent project and is not affiliated with or endorsed by Linden Lab. Second Life is a trademark of Linden Research, Inc.</p>
-    <p class="footer__credits">Pictures: <a href="https://www.flickr.com/photos/34067077@N00/211404733">“Heat”</a> and <a href="https://www.flickr.com/photos/34067077@N00/212122091">“Kiln, Pre Firing”</a> by Martin Cathrae, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>, via Flickr; <a href="https://www.flickr.com/photos/28179929@N08/4038126664">“The Beehive Kiln in operation at the Pipe Works, Kingscourt Bricks Ltd”</a> by sludgegulper, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>, via Flickr; <a href="https://commons.wikimedia.org/w/index.php?curid=77590014">Storage jar, Tamba ware, Muromachi period</a>, Cleveland Museum of Art, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=19011811">“Jin Jun ware dish with splashed glazes”</a> by BabelStone, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=55976186">“Pot belly, where crockery is born”</a> by Edna Winti, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>; video <a href="https://commons.wikimedia.org/wiki/File:Salt_kiln.webm">“Salt kiln”</a> by Margalob, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons.</p>
+    <p class="footer__credits">Pictures: <a href="https://www.flickr.com/photos/34067077@N00/211404733">“Heat”</a> and <a href="https://www.flickr.com/photos/34067077@N00/212122091">“Kiln, Pre Firing”</a> by Martin Cathrae, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>, via Flickr; <a href="https://www.flickr.com/photos/28179929@N08/4038126664">“The Beehive Kiln in operation at the Pipe Works, Kingscourt Bricks Ltd”</a> by sludgegulper, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>, via Flickr; <a href="https://commons.wikimedia.org/w/index.php?curid=77590014">Storage jar, Tamba ware, Muromachi period</a>, Cleveland Museum of Art, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=19011811">“Jin Jun ware dish with splashed glazes”</a> by BabelStone, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=55976186">“Pot belly, where crockery is born”</a> by Edna Winti, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>; <a href="https://www.rawpixel.com/image/3305358/free-photo-image-artist-clay-pottery">“Hands create art pottery wheel”</a>, rawpixel, CC0; <a href="https://www.artic.edu/artworks/9512">Oribe-type ewer</a>, Art Institute of Chicago, CC0; video <a href="https://commons.wikimedia.org/wiki/File:Salt_kiln.webm">“Salt kiln”</a> by Margalob, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons.</p>
   </div>
   <div class="footer__last">
     <p>© 2026 Kiln Viewer contributors</p>

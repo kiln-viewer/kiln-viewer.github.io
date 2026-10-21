@@ -30,35 +30,6 @@ document.documentElement.classList.add("js");
   items.forEach((el) => observer.observe(el));
 })();
 
-// FAQ: the selected question's answer fills the pane; on a phone it opens in place.
-(() => {
-  const questions = [...document.querySelectorAll(".faq .q")];
-  const answer = document.querySelector(".faq__answer");
-  if (!questions.length || !answer) return;
-
-  const select = (q) => {
-    questions.forEach((other) => {
-      const open = other === q;
-      other.setAttribute("aria-expanded", String(open));
-      document.getElementById(other.getAttribute("aria-controls")).hidden = !open;
-    });
-    const text = document.getElementById(q.getAttribute("aria-controls")).textContent.trim();
-    if (answer.textContent === text) return;
-    answer.classList.add("is-swapping");
-    setTimeout(() => {
-      answer.textContent = text;
-      answer.classList.remove("is-swapping");
-    }, 150);
-  };
-
-  const wide = window.matchMedia("(min-width: 681px)");
-  questions.forEach((q) => {
-    q.addEventListener("click", () => select(q));
-    q.addEventListener("focus", () => wide.matches && select(q));
-    q.addEventListener("mouseenter", () => wide.matches && select(q));
-  });
-})();
-
 // The glaze test tile: paint on bisque, then fire it.
 (() => {
   const canvas = document.querySelector(".paint__tile");
