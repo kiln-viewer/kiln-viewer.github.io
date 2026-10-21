@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kiln — the Second Life viewer with a studio inside</title>
+  <meta name="description" content="Kiln is a free, open-source Second Life viewer with modeling and texture painting built in. Shape, glaze and fire your work without leaving the world.">
+  <meta property="og:title" content="Kiln — the Second Life viewer with a studio inside">
+  <meta property="og:description" content="Model, paint and see your work in-world, in one viewer. Free and open source. In development.">
+  <meta property="og:image" content="https://kilnviewer.com/img/kiln-icon.png">
+  <meta name="theme-color" content="#120b09">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hero board" id="top">
+  <div class="tile band">
+    <h1 class="band__name" aria-label="Kiln, a Second Life viewer for creators"><span aria-hidden="true">Kiln<span class="band__rest"> viewer</span></span></h1>
+  </div>
+
+  <nav class="links" aria-label="Sections">
+    <a class="tile link" href="#how">How it works</a>
+    <a class="tile link" href="#tools">Tools</a>
+    <a class="tile link" href="#about">About</a>
+    <a class="tile link" href="#faq">Questions</a>
+  </nav>
+
+  <div class="rails">
+    <div class="rail rail--left">
+      <figure class="tile photo photo--ui" data-rise>
+        <img src="img/kiln-login-panel.jpg" width="580" height="1080" alt="The Kiln login screen on macOS: the kiln icon and wordmark above the username and password fields.">
+        <figcaption>Kiln today: the first macOS build.</figcaption>
+      </figure>
+      <ul class="tile facts" data-rise>
+        <li>Free and open source</li>
+        <li>macOS, Windows, Linux</li>
+        <li>Built on the official viewer</li>
+        <li>Runs beside your current viewer</li>
+        <li>In development</li>
+      </ul>
+    </div>
+
+    <div class="stage">
+      <figure class="tile photo photo--hero">
+        <img class="drift" src="img/heat.jpg" width="1023" height="682" alt="Inside a kiln at full heat: bricks glowing orange and white.">
+      </figure>
+      <p class="tile statement" data-rise>The Second Life viewer with a studio inside: shape, paint and fire your work without leaving the world.</p>
+    </div>
+
+    <div class="rail rail--right">
+      <p class="tile swatch swatch--1" data-rise>Mesh editing in the viewer</p>
+      <p class="tile swatch swatch--2" data-rise>Texture painting on the object</p>
+      <p class="tile swatch swatch--3" data-rise>See it in-world before you upload</p>
+      <p class="tile swatch swatch--4" data-rise>Round trip with Blender</p>
+      <a class="tile swatch swatch--action" href="https://github.com/kiln-viewer" data-rise>Follow on GitHub</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="how" id="how" aria-labelledby="how-title">
+    <div class="field field--1">
+      <h2 id="how-title" class="field__title" data-rise>How Kiln will work</h2>
+      <div class="card" data-ui data-rise>
+        <p class="card__name">Cup, stoneware</p>
+        <dl>
+          <div><dt>Mesh</dt><dd>1,184 triangles</dd></div>
+          <div><dt>UV map</dt><dd>None yet</dd></div>
+          <div><dt>Texture</dt><dd>None</dd></div>
+        </dl>
+        <p class="card__state">Shaping</p>
+      </div>
+      <p class="field__clause" data-rise>First, shape it right where it stands.</p>
+    </div>
+    <div class="field field--2">
+      <div class="card" data-ui data-rise>
+        <p class="card__name">Cup, stoneware</p>
+        <dl>
+          <div><dt>Mesh</dt><dd>1,184 triangles</dd></div>
+          <div><dt>UV map</dt><dd>3 islands, 92% used</dd></div>
+          <div><dt>Seams</dt><dd>14 edges</dd></div>
+        </dl>
+        <p class="card__state">Unwrapped</p>
+      </div>
+      <p class="field__clause" data-rise>Then open it flat and mark the seams.</p>
+    </div>
+    <div class="field field--3">
+      <div class="card" data-ui data-rise>
+        <p class="card__name">Cup, stoneware</p>
+        <dl>
+          <div><dt>Base colour</dt><dd>1024 × 1024</dd></div>
+          <div><dt>Layers</dt><dd>Clay, teal glaze, rim</dd></div>
+          <div><dt>Roughness</dt><dd>0.35</dd></div>
+        </dl>
+        <p class="card__state">Glazed</p>
+      </div>
+      <p class="field__clause" data-rise>Then paint the glaze on the cup itself.</p>
+    </div>
+    <div class="field field--4">
+      <div class="card" data-ui data-rise>
+        <p class="card__name">Cup, stoneware</p>
+        <dl>
+          <div><dt>LODs</dt><dd>4 of 4 generated</dd></div>
+          <div><dt>Physics</dt><dd>Convex hull</dd></div>
+          <div><dt>Land impact</dt><dd>1</dd></div>
+        </dl>
+        <p class="card__state card__state--done">Fired, in-world</p>
+      </div>
+      <p class="field__clause" data-rise>Then fire it and set it on the table.</p>
+    </div>
+  </section>
+
+  <section class="tools board" id="tools" aria-labelledby="tools-title">
+    <h2 id="tools-title" class="section-title" data-rise>What goes in the kiln</h2>
+    <div class="cells">
+
+      <article class="cell cell--text-top" data-rise>
+        <div class="cell__text">
+          <h3>Mesh editing</h3>
+          <p>Select vertices, edges or faces on the object in-world and move, extrude or cut them.</p>
+          <p class="status">In development</p>
+        </div>
+        <div class="frag frag--modes" data-ui>
+          <div class="seg" role="group" aria-label="Selection mode (example)">
+            <span>Vertex</span><span>Edge</span><span class="is-on">Face</span>
+          </div>
+          <div class="ops">
+            <span>Extrude</span><span>Inset</span><span>Loop cut</span><span>Bevel</span>
+          </div>
+          <p class="frag__note">12 faces selected</p>
+        </div>
+      </article>
+
+      <article class="cell cell--frag-top cell--live" data-rise>
+        <div class="frag frag--paint" data-ui>
+          <div class="paint">
+            <canvas class="paint__tile" width="560" height="400" aria-label="A bisque test tile you can paint on"></canvas>
+            <noscript><p class="paint__fallback">Turn on JavaScript to paint the tile.</p></noscript>
+          </div>
+          <div class="paint__bar">
+            <div class="paint__glazes" role="radiogroup" aria-label="Glaze">
+              <button type="button" role="radio" aria-checked="true" data-glaze="#2bb3a6" style="--g:#2bb3a6"><span class="sr">Teal</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#9cc5a8" style="--g:#9cc5a8"><span class="sr">Celadon</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#5a2e1a" style="--g:#5a2e1a"><span class="sr">Tenmoku</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#efe2cf" style="--g:#efe2cf"><span class="sr">Shino</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#b0302a" style="--g:#b0302a"><span class="sr">Copper red</span></button>
+            </div>
+            <button type="button" class="paint__fire">Fire it</button>
+            <button type="button" class="paint__clear">Wipe</button>
+          </div>
+        </div>
+        <div class="cell__text">
+          <h3>Texture painting</h3>
+          <p>Paint straight onto the face in-world, in layers, with base colour, roughness and emission. Try it on the tile above.</p>
+          <p class="status">In development</p>
+        </div>
+      </article>
+
+      <article class="cell cell--text-top" data-rise>
+        <div class="cell__text">
+          <h3>UV editor</h3>
+          <p>Unwrap, pack and see the seams on the object while you work, not in a separate program.</p>
+          <p class="status">Planned</p>
+        </div>
+        <div class="frag frag--uv" data-ui>
+          <svg viewBox="0 0 200 200" role="img" aria-label="Three UV islands packed in a square">
+            <rect x="1" y="1" width="198" height="198" class="uv__space"/>
+            <path class="uv__island uv__island--a" d="M12 14h112v58H12z"/>
+            <path class="uv__island uv__island--b" d="M12 82h176v58H12z"/>
+            <path class="uv__island uv__island--c" d="M134 14h54v58h-54z"/>
+            <circle class="uv__island uv__island--d" cx="58" cy="168" r="22"/>
+          </svg>
+          <p class="frag__note">3 islands · 92% of the space used</p>
+        </div>
+      </article>
+
+      <article class="cell cell--frag-top" data-rise>
+        <div class="frag frag--lod" data-ui>
+          <table>
+            <caption class="sr">Levels of detail for the example cup</caption>
+            <thead><tr><th scope="col">Level</th><th scope="col">Triangles</th></tr></thead>
+            <tbody>
+              <tr><td>High</td><td>1,184</td></tr>
+              <tr><td>Medium</td><td>412</td></tr>
+              <tr><td>Low</td><td>128</td></tr>
+              <tr><td>Lowest</td><td>36</td></tr>
+            </tbody>
+          </table>
+          <p class="frag__note">Land impact 1</p>
+        </div>
+        <div class="cell__text">
+          <h3>LOD and physics</h3>
+          <p>Generate all four levels of detail and the physics shape, and read the land impact before you pay to upload.</p>
+          <p class="status">Planned</p>
+        </div>
+      </article>
+
+      <article class="cell cell--text-top" data-rise>
+        <div class="cell__text">
+          <h3>Try before upload</h3>
+          <p>Wear and rez your work locally, with your own textures, until it is right. Upload once, at the end.</p>
+          <p class="status">Planned</p>
+        </div>
+        <div class="frag frag--local" data-ui>
+          <div class="row"><span>Preview in-world</span><span class="switch is-on" aria-hidden="true"></span></div>
+          <div class="row"><span>Texture</span><span>cup_glaze.png, local</span></div>
+          <div class="row"><span>Spent so far</span><span>L$0</span></div>
+        </div>
+      </article>
+
+      <article class="cell cell--frag-top" data-rise>
+        <div class="frag frag--blender" data-ui>
+          <p class="pill-row"><span class="dot" aria-hidden="true"></span>Blender connected</p>
+          <p class="frag__big">cup_stoneware.glb</p>
+          <p class="frag__note">glTF 2.0 · synced 12 s ago</p>
+          <span class="frag__btn">Send to Blender</span>
+        </div>
+        <div class="cell__text">
+          <h3>Blender link</h3>
+          <p>For the big jobs, send the mesh to Blender and back as glTF, without exporting by hand.</p>
+          <p class="status">Planned</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Shape it</span><img src="img/kiln-pre-firing.jpg" width="1024" height="683" alt="">
+      <span>Paint it</span><img src="img/jin-jun-ware-dish-with-splashed-glazes.jpg" width="1600" height="1592" alt="">
+      <span>Fire it in-world</span><img src="img/pot-belly-where-crockery-is-born-18793189726.jpg" width="1600" height="1067" alt="">
+      <span>Shape it</span><img src="img/kiln-pre-firing.jpg" width="1024" height="683" alt="">
+      <span>Paint it</span><img src="img/jin-jun-ware-dish-with-splashed-glazes.jpg" width="1600" height="1592" alt="">
+      <span>Fire it in-world</span><img src="img/pot-belly-where-crockery-is-born-18793189726.jpg" width="1600" height="1067" alt="">
+    </div>
+  </div>
+
+  <section class="about board" id="about" aria-labelledby="about-title">
+    <h2 id="about-title" class="section-title" data-rise>Built on the official viewer</h2>
+    <p class="about__lead" data-rise>Kiln starts from Linden Lab’s own viewer and follows its releases, so new Second Life features arrive with each merge. It keeps its own settings and cache, and runs beside Firestorm or the official viewer.</p>
+    <div class="about__tiles">
+      <figure class="tile about__photo" data-rise>
+        <img src="img/the-beehive-kiln-in-operation-at-the.jpg" width="1600" height="1067" loading="lazy" alt="A domed beehive kiln firing bricks, with a tall chimney behind it.">
+        <p class="about__note">A kiln is where shaped clay and wet glaze become one finished piece. That is the step Kiln brings into the viewer.</p>
+      </figure>
+      <div class="about__side">
+        <div class="tile about__mark" data-rise>
+          <svg viewBox="0 0 200 160" role="img" aria-label="The Kiln mark: a domed kiln with a flame in its door">
+            <path class="mark__body" d="M30 150V86a70 70 0 0 1 140 0v64z"/>
+            <path class="mark__door" d="M74 150v-44a26 26 0 0 1 52 0v44z"/>
+            <rect class="mark__neck" x="82" y="6" width="36" height="16"/>
+            <circle class="mark__flame" cx="100" cy="128" r="11"/>
+          </svg>
+        </div>
+        <dl class="about__facts" data-rise>
+          <div><dt>Based on</dt><dd>Linden Lab viewer 26.4</dd></div>
+          <div><dt>Licence</dt><dd>LGPL-2.1</dd></div>
+          <div><dt>Platforms</dt><dd>macOS, Windows, Linux</dd></div>
+          <div><dt>Status</dt><dd>In development</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq board" id="faq" aria-labelledby="faq-title">
+    <div class="faq__list">
+      <h2 id="faq-title" class="faq__title">Common questions</h2>
+      <ul role="list">
+        <li><button type="button" class="q" aria-expanded="true" aria-controls="a1" id="q1">Is Kiln free?</button>
+          <div class="a" id="a1" role="region" aria-labelledby="q1"><p>Yes. Kiln is free, and its source is released under LGPL-2.1, the same licence as the viewer it is built on.</p></div></li>
+        <li><button type="button" class="q" aria-expanded="false" aria-controls="a2" id="q2">When can I download it?</button>
+          <div class="a" id="a2" role="region" aria-labelledby="q2" hidden><p>There is no public build yet. Follow the Kiln organisation on GitHub to hear when the first preview is ready.</p></div></li>
+        <li><button type="button" class="q" aria-expanded="false" aria-controls="a3" id="q3">Do I have to give up Firestorm?</button>
+          <div class="a" id="a3" role="region" aria-labelledby="q3" hidden><p>No. Kiln has its own install folder, settings and cache, so it runs beside Firestorm or the official viewer.</p></div></li>
+        <li><button type="button" class="q" aria-expanded="false" aria-controls="a4" id="q4">Do I still need Blender?</button>
+          <div class="a" id="a4" role="region" aria-labelledby="q4" hidden><p>For big modelling jobs, yes. Kiln covers the changes you make between uploads, and the Blender link carries the mesh across and back.</p></div></li>
+        <li><button type="button" class="q" aria-expanded="false" aria-controls="a5" id="q5">Will painting cost upload fees?</button>
+          <div class="a" id="a5" role="region" aria-labelledby="q5" hidden><p>Painting and previewing stay on your computer. You pay Second Life’s usual fee only when you upload the finished texture or mesh.</p></div></li>
+        <li><button type="button" class="q" aria-expanded="false" aria-controls="a6" id="q6">Is Kiln made by Linden Lab?</button>
+          <div class="a" id="a6" role="region" aria-labelledby="q6" hidden><p>No. Kiln is an independent third-party viewer, built to follow Linden Lab’s Third Party Viewer Policy. It is not made or endorsed by Linden Lab.</p></div></li>
+      </ul>
+    </div>
+    <div class="faq__pane" aria-hidden="true"><p class="faq__answer">Yes. Kiln is free, and its source is released under LGPL-2.1, the same licence as the viewer it is built on.</p></div>
+  </section>
+
+  <section class="cta board" aria-labelledby="cta-title">
+    <figure class="tile cta__flank cta__flank--photo">
+      <img src="img/japan-muromachi-period-storage-jar-tamba-ware.jpg" width="1389" height="1600" loading="lazy" alt="A Tamba ware storage jar from the Muromachi period, its green ash glaze running down the shoulder.">
+    </figure>
+    <div class="tile cta__main" data-rise>
+      <h2 id="cta-title">Be there for the first firing</h2>
+      <p>Kiln is in development. Follow the organisation on GitHub to see the work as it happens and hear when the first preview is out.</p>
+      <a class="button" href="https://github.com/kiln-viewer">Follow on GitHub</a>
+    </div>
+    <figure class="tile cta__flank cta__flank--video">
+      <video autoplay muted loop playsinline preload="metadata" poster="video/salt-kiln-poster.jpg" aria-label="Potters throwing salt into a firing kiln; the spy hole glows orange.">
+        <source src="video/salt-kiln.mp4" type="video/mp4">
+      </video>
+    </figure>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="blocks" role="img" aria-label="Kiln">
+    <span class="block block--k"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">K</text></svg></span><span class="block block--i"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">I</text></svg></span><span class="block block--l"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">L</text></svg></span><span class="block block--n"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">N</text></svg></span>
+  </div>
+  <div class="footer__cols">
+    <ul>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">Questions</a></li>
+    </ul>
+    <ul>
+      <li><a href="https://github.com/kiln-viewer">GitHub</a></li>
+      <li><a href="https://data.kilnviewer.com/data.json">Release data</a></li>
+      <li><a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">Licence</a></li>
+    </ul>
+    <p class="footer__legal">Kiln is an independent project and is not affiliated with or endorsed by Linden Lab. Second Life is a trademark of Linden Research, Inc.</p>
+    <p class="footer__credits">Pictures: <a href="https://www.flickr.com/photos/34067077@N00/211404733">“Heat”</a> and <a href="https://www.flickr.com/photos/34067077@N00/212122091">“Kiln, Pre Firing”</a> by Martin Cathrae, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>, via Flickr; <a href="https://www.flickr.com/photos/28179929@N08/4038126664">“The Beehive Kiln in operation at the Pipe Works, Kingscourt Bricks Ltd”</a> by sludgegulper, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>, via Flickr; <a href="https://commons.wikimedia.org/w/index.php?curid=77590014">Storage jar, Tamba ware, Muromachi period</a>, Cleveland Museum of Art, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=19011811">“Jin Jun ware dish with splashed glazes”</a> by BabelStone, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=55976186">“Pot belly, where crockery is born”</a> by Edna Winti, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>; video <a href="https://commons.wikimedia.org/wiki/File:Salt_kiln.webm">“Salt kiln”</a> by Margalob, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons.</p>
+  </div>
+  <div class="footer__last">
+    <p>© 2026 Kiln Viewer contributors</p>
+    <a class="button button--small" href="#top">Back to top</a>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
