@@ -28,6 +28,22 @@ document.documentElement.classList.add("js");
     { rootMargin: "0px 0px -8% 0px" }
   );
   items.forEach((el) => observer.observe(el));
+
+  // A fast scroll or an anchor jump can carry an element past the viewport
+  // without it ever intersecting; reveal anything that is already above the fold.
+  let pending = false;
+  const catchUp = () => {
+    pending = false;
+    document.querySelectorAll("[data-rise]:not(.in)").forEach((el) => {
+      if (el.getBoundingClientRect().top < window.innerHeight) {
+        el.classList.add("in");
+        observer.unobserve(el);
+      }
+    });
+  };
+  window.addEventListener("scroll", () => {
+    if (!pending) { pending = true; requestAnimationFrame(catchUp); }
+  }, { passive: true });
 })();
 
 // The glaze test tile: paint on bisque, then fire it.

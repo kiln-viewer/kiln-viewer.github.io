@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kiln — 공방을 품은 Second Life 뷰어</title>
+  <meta name="description" content="Kiln은 모델링과 텍스처 페인팅을 내장한 무료 오픈 소스 Second Life 뷰어입니다. 인월드를 떠나지 않고 빚고, 유약을 바르고, 굽습니다.">
+  <meta property="og:title" content="Kiln — 공방을 품은 Second Life 뷰어">
+  <meta property="og:description" content="모델링하고, 칠하고, 인월드에서 확인까지 뷰어 하나로. 무료 오픈 소스. 개발 중.">
+  <meta property="og:image" content="https://kilnviewer.com/img/social.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+  <meta property="og:url" content="https://kilnviewer.com/ko/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#120b09">
+  <link rel="icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <!-- i18n:hreflang -->
+  <link rel="alternate" hreflang="en" href="https://kilnviewer.com/">
+  <link rel="alternate" hreflang="da" href="https://kilnviewer.com/da/">
+  <link rel="alternate" hreflang="de" href="https://kilnviewer.com/de/">
+  <link rel="alternate" hreflang="es" href="https://kilnviewer.com/es/">
+  <link rel="alternate" hreflang="fr" href="https://kilnviewer.com/fr/">
+  <link rel="alternate" hreflang="it" href="https://kilnviewer.com/it/">
+  <link rel="alternate" hreflang="ja" href="https://kilnviewer.com/ja/">
+  <link rel="alternate" hreflang="ko" href="https://kilnviewer.com/ko/">
+  <link rel="alternate" hreflang="pl" href="https://kilnviewer.com/pl/">
+  <link rel="alternate" hreflang="pt-BR" href="https://kilnviewer.com/pt/">
+  <link rel="alternate" hreflang="ru" href="https://kilnviewer.com/ru/">
+  <link rel="alternate" hreflang="tr" href="https://kilnviewer.com/tr/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://kilnviewer.com/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://kilnviewer.com/">
+  <!-- /i18n:hreflang -->
+</head>
+<body>
+
+<header class="hero board" id="top">
+  <div class="tile band">
+    <h1 class="band__name" aria-label="Kiln, 크리에이터를 위한 Second Life 뷰어"><span aria-hidden="true"><!-- i18n:skip -->Kiln<span class="band__rest"> viewer</span><!-- /i18n:skip --></span></h1>
+  </div>
+
+  <nav class="links" aria-label="섹션">
+    <a class="tile link" href="#how">작동 방식</a>
+    <a class="tile link" href="#tools">도구</a>
+    <a class="tile link" href="#about">소개</a>
+    <a class="tile link" href="#faq">자주 묻는 질문</a>
+    <a class="tile link link--support" href="../support/">후원</a>
+    <!-- i18n:switcher --><details class="tile lang"><summary>한국어</summary><ul class="lang__menu"><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../da/" hreflang="da" lang="da">Dansk</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../it/" hreflang="it" lang="it">Italiano</a></li><li><a href="../ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="../ko/" hreflang="ko" lang="ko" aria-current="page">한국어</a></li><li><a href="../pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="../pt/" hreflang="pt-BR" lang="pt-BR">Português</a></li><li><a href="../ru/" hreflang="ru" lang="ru">Русский</a></li><li><a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="../zh/" hreflang="zh-Hant" lang="zh-Hant">中文（繁體）</a></li></ul></details><!-- /i18n:switcher -->
+  </nav>
+
+  <div class="rails">
+    <div class="rail rail--left">
+      <figure class="tile photo photo--ui" data-rise>
+        <img src="../img/kiln-login-panel.jpg" width="580" height="1080" alt="macOS의 Kiln 로그인 화면: 사용자 이름과 비밀번호 입력란 위에 가마 아이콘과 워드마크.">
+        <figcaption>현재의 Kiln: 첫 macOS 빌드.</figcaption>
+      </figure>
+      <ul class="tile facts" data-rise>
+        <li>무료 오픈 소스</li>
+        <li>macOS, Windows, Linux</li>
+        <li>공식 뷰어 기반</li>
+        <li>기존 뷰어와 함께 실행</li>
+        <li>개발 중</li>
+      </ul>
+    </div>
+
+    <div class="stage">
+      <figure class="tile photo photo--hero">
+        <img class="drift" src="../img/heat.jpg" width="1023" height="682" alt="최고 온도로 달아오른 가마 내부: 주황색과 흰색으로 빛나는 벽돌.">
+      </figure>
+      <p class="tile statement" data-rise>공방을 품은 Second Life 뷰어. 인월드를 떠나지 않고 빚고, 칠하고, 굽습니다.</p>
+    </div>
+
+    <div class="rail rail--right">
+      <p class="tile swatch swatch--1" data-rise>뷰어 안에서 메시 편집</p>
+      <p class="tile swatch swatch--2" data-rise>오브젝트 위에 직접 텍스처 페인팅</p>
+      <p class="tile swatch swatch--3" data-rise>업로드 전에 인월드에서 확인</p>
+      <p class="tile swatch swatch--4" data-rise>Blender와 오가며 작업</p>
+      <a class="tile swatch swatch--action" href="https://github.com/kiln-viewer" data-rise>GitHub에서 팔로우</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="how-wrap board" id="how" aria-labelledby="how-title">
+    <h2 id="how-title" class="section-title" data-rise>Kiln의 작동 방식</h2>
+    <div class="how">
+    <div class="field field--1">
+      <figure class="field__photo"><img src="../img/hands-create-art-pottery-wheel.jpg" width="1024" height="613" loading="lazy" alt="물레 위 두 손 사이로 올라오는 젖은 점토."></figure>
+      <h3 class="field__stage" data-rise>빚기</h3>
+      <div class="card" data-ui data-rise>
+        <p class="card__name">컵, 석기</p>
+        <dl><div><dt>메시</dt><dd>삼각형 1,184개</dd></div><div><dt>UV 맵</dt><dd>아직 없음</dd></div><div><dt>텍스처</dt><dd>없음</dd></div></dl>
+        <p class="card__state">성형 중</p>
+      </div>
+      <p class="field__clause" data-rise>먼저, 그 자리에서 모양을 잡습니다.</p>
+    </div>
+    <div class="field field--2">
+      <figure class="field__photo"><img src="../img/oribe-type-ewer.jpg" width="1280" height="1600" loading="lazy" alt="표면이 그림을 그린 구획으로 나뉜 오리베 주전자."></figure>
+      <h3 class="field__stage" data-rise>펼치기</h3>
+      <div class="card" data-ui data-rise>
+        <p class="card__name">컵, 석기</p>
+        <dl><div><dt>메시</dt><dd>삼각형 1,184개</dd></div><div><dt>UV 맵</dt><dd>아일랜드 3개, 92% 사용</dd></div><div><dt>심</dt><dd>엣지 14개</dd></div></dl>
+        <p class="card__state">펼침 완료</p>
+      </div>
+      <p class="field__clause" data-rise>다음으로, 평평하게 펼치고 심을 표시합니다.</p>
+    </div>
+    <div class="field field--3">
+      <figure class="field__photo"><img src="../img/jin-jun-ware-dish-with-splashed-glazes.jpg" width="1600" height="1592" loading="lazy" alt="보라색이 흩뿌려진 연청색 유약의 균요 접시."></figure>
+      <h3 class="field__stage" data-rise>유약</h3>
+      <div class="card" data-ui data-rise>
+        <p class="card__name">컵, 석기</p>
+        <dl><div><dt>기본 색상</dt><dd>1024 × 1024</dd></div><div><dt>레이어</dt><dd>점토, 청록 유약, 테두리</dd></div><div><dt>거칠기</dt><dd>0.35</dd></div></dl>
+        <p class="card__state">시유 완료</p>
+      </div>
+      <p class="field__clause" data-rise>다음으로, 컵 위에 직접 유약을 칠합니다.</p>
+    </div>
+    <div class="field field--4">
+      <figure class="field__photo"><img src="../img/kiln-pre-firing.jpg" width="1024" height="683" loading="lazy" alt="벽돌 가마 안 선반에 쌓여 소성을 기다리는 그릇들."></figure>
+      <h3 class="field__stage" data-rise>굽기</h3>
+      <div class="card" data-ui data-rise>
+        <p class="card__name">컵, 석기</p>
+        <dl><div><dt>LOD</dt><dd>4단계 모두 생성됨</dd></div><div><dt>물리</dt><dd>볼록 껍질</dd></div><div><dt>랜드 임팩트</dt><dd>1</dd></div></dl>
+        <p class="card__state card__state--done">소성 완료, 인월드</p>
+      </div>
+      <p class="field__clause" data-rise>마지막으로, 구워서 테이블 위에 올립니다.</p>
+    </div>
+    </div>
+  </section>
+
+  <section class="tools board" id="tools" aria-labelledby="tools-title">
+    <h2 id="tools-title" class="section-title" data-rise>가마에 들어가는 것</h2>
+    <div class="cells">
+
+      <article class="cell cell--frag-top cell--live" data-rise>
+        <div class="frag frag--paint" data-ui>
+          <div class="paint">
+            <canvas class="paint__tile" width="560" height="400" aria-label="칠해 볼 수 있는 초벌 테스트 타일"></canvas>
+            <noscript><p class="paint__fallback">타일에 칠하려면 JavaScript를 켜 주세요.</p></noscript>
+          </div>
+          <div class="paint__bar">
+            <div class="paint__glazes" role="radiogroup" aria-label="유약">
+              <button type="button" role="radio" aria-checked="true" data-glaze="#2bb3a6" style="--g:#2bb3a6"><span class="sr">청록</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#9cc5a8" style="--g:#9cc5a8"><span class="sr">청자</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#5a2e1a" style="--g:#5a2e1a"><span class="sr">천목</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#efe2cf" style="--g:#efe2cf"><span class="sr">시노</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#b0302a" style="--g:#b0302a"><span class="sr">진사</span></button>
+            </div>
+            <button type="button" class="paint__fire">굽기</button>
+            <button type="button" class="paint__clear">지우기</button>
+          </div>
+        </div>
+        <div class="cell__text">
+          <h3>텍스처 페인팅</h3>
+          <p>인월드에서 면 위에 바로, 레이어로 칠합니다. 기본 색상, 거칠기, 발광을 지원합니다. 테스트 타일에서 직접 해 보세요.</p>
+          <p class="status">개발 중</p>
+        </div>
+      </article>
+
+      <article class="cell cell--text-top" data-rise>
+        <div class="cell__text">
+          <h3>메시 편집</h3>
+          <p>인월드에서 오브젝트의 버텍스, 엣지, 면을 선택해 이동하고, 돌출하고, 자를 수 있습니다.</p>
+          <p class="status">개발 중</p>
+        </div>
+        <div class="frag frag--modes" data-ui>
+          <div class="seg" role="group" aria-label="선택 모드(예시)">
+            <span>버텍스</span><span>엣지</span><span class="is-on">면</span>
+          </div>
+          <div class="ops">
+            <span>돌출</span><span>인셋</span><span>루프 컷</span><span>베벨</span>
+          </div>
+          <p class="frag__note">면 12개 선택됨</p>
+        </div>
+      </article>
+
+      <article class="cell cell--text-top" data-rise>
+        <div class="cell__text">
+          <h3>UV 편집기</h3>
+          <p>별도 프로그램이 아니라 작업 중인 오브젝트 위에서 펼치고, 배치하고, 심을 확인합니다.</p>
+          <p class="status">예정</p>
+        </div>
+        <div class="frag frag--uv" data-ui>
+          <svg viewBox="0 0 200 200" role="img" aria-label="정사각형 안에 배치된 UV 아일랜드 3개">
+            <rect x="1" y="1" width="198" height="198" class="uv__space"/>
+            <path class="uv__island uv__island--a" d="M12 14h112v58H12z"/>
+            <path class="uv__island uv__island--b" d="M12 82h176v58H12z"/>
+            <path class="uv__island uv__island--c" d="M134 14h54v58h-54z"/>
+            <circle class="uv__island uv__island--d" cx="58" cy="168" r="22"/>
+          </svg>
+          <p class="frag__note">아일랜드 3개 · 공간의 92% 사용</p>
+        </div>
+      </article>
+
+      <article class="cell cell--frag-top" data-rise>
+        <div class="frag frag--lod" data-ui>
+          <table>
+            <caption class="sr">예시 컵의 LOD</caption>
+            <thead><tr><th scope="col">단계</th><th scope="col">삼각형</th></tr></thead>
+            <tbody>
+              <tr><td>높음</td><td>1,184</td></tr>
+              <tr><td>중간</td><td>412</td></tr>
+              <tr><td>낮음</td><td>128</td></tr>
+              <tr><td>최저</td><td>36</td></tr>
+            </tbody>
+          </table>
+          <p class="frag__note">랜드 임팩트 1</p>
+        </div>
+        <div class="cell__text">
+          <h3>LOD와 물리</h3>
+          <p>LOD 4단계와 물리 형상을 생성하고, 업로드 비용을 내기 전에 랜드 임팩트를 확인합니다.</p>
+          <p class="status">예정</p>
+        </div>
+      </article>
+
+      <article class="cell cell--text-top" data-rise>
+        <div class="cell__text">
+          <h3>업로드 전에 미리 보기</h3>
+          <p>직접 만든 텍스처로 만족할 때까지 로컬에서 착용하고 레즈해 보세요. 업로드는 마지막에 한 번만.</p>
+          <p class="status">예정</p>
+        </div>
+        <div class="frag frag--local" data-ui>
+          <div class="row"><span>인월드 미리 보기</span><span class="switch is-on" aria-hidden="true"></span></div>
+          <div class="row"><span>텍스처</span><span>cup_glaze.png, 로컬</span></div>
+          <div class="row"><span>지금까지 쓴 비용</span><span>L$0</span></div>
+        </div>
+      </article>
+
+      <article class="cell cell--frag-top" data-rise>
+        <div class="frag frag--blender" data-ui>
+          <p class="pill-row"><span class="dot" aria-hidden="true"></span>Blender 연결됨</p>
+          <p class="frag__big">cup_stoneware.glb</p>
+          <p class="frag__note">glTF 2.0 · 12초 전 동기화</p>
+          <span class="frag__btn">Blender로 보내기</span>
+        </div>
+        <div class="cell__text">
+          <h3>Blender 연동</h3>
+          <p>큰 작업은 메시를 glTF로 Blender에 보냈다가 다시 가져옵니다. 직접 내보낼 필요가 없습니다.</p>
+          <p class="status">예정</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>빚고</span><img src="../img/kiln-pre-firing.jpg" width="1024" height="683" alt="">
+      <span>칠하고</span><img src="../img/jin-jun-ware-dish-with-splashed-glazes.jpg" width="1600" height="1592" alt="">
+      <span>인월드에서 굽습니다</span><img src="../img/pot-belly-where-crockery-is-born-18793189726.jpg" width="1600" height="1067" alt="">
+      <span>빚고</span><img src="../img/kiln-pre-firing.jpg" width="1024" height="683" alt="">
+      <span>칠하고</span><img src="../img/jin-jun-ware-dish-with-splashed-glazes.jpg" width="1600" height="1592" alt="">
+      <span>인월드에서 굽습니다</span><img src="../img/pot-belly-where-crockery-is-born-18793189726.jpg" width="1600" height="1067" alt="">
+    </div>
+  </div>
+
+  <section class="about board" id="about" aria-labelledby="about-title">
+    <h2 id="about-title" class="section-title" data-rise>공식 뷰어 기반</h2>
+    <p class="about__lead" data-rise>Kiln은 Linden Lab의 공식 뷰어를 기반으로 하고 그 릴리스를 따라가므로, 세컨드 라이프의 새 기능이 병합할 때마다 함께 들어옵니다. 설정과 캐시를 따로 두기 때문에 Firestorm이나 공식 뷰어와 함께 실행할 수 있습니다.</p>
+    <div class="about__tiles">
+      <figure class="tile about__photo" data-rise>
+        <img src="../img/the-beehive-kiln-in-operation-at-the.jpg" width="937" height="631" loading="lazy" alt="벽돌을 굽는 돔형 가마와 그 뒤의 높은 굴뚝.">
+        <p class="about__note">가마는 빚은 점토와 젖은 유약이 하나의 완성품이 되는 곳입니다. Kiln은 바로 그 과정을 뷰어 안으로 가져옵니다.</p>
+      </figure>
+      <div class="about__side">
+        <div class="tile about__mark" data-rise>
+          <img src="../img/kiln-icon.png" width="512" height="512" loading="lazy" alt="Kiln 아이콘: 돔을 따라 청록 유약이 흘러내리고 아궁이에 불꽃이 있는 흙 가마.">
+        </div>
+        <dl class="about__facts" data-rise>
+          <div><dt>기반</dt><dd>Linden Lab 뷰어 26.4</dd></div>
+          <div><dt>라이선스</dt><dd>LGPL-2.1</dd></div>
+          <div><dt>플랫폼</dt><dd>macOS, Windows, Linux</dd></div>
+          <div><dt>상태</dt><dd>개발 중</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq board" id="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="section-title" data-rise>자주 묻는 질문</h2>
+    <div class="qa-list">
+      <div class="qa" data-rise>
+        <h3>Kiln은 무료인가요?</h3>
+        <p>네. Kiln은 무료이며, 소스는 기반이 된 뷰어와 같은 LGPL-2.1 라이선스로 공개됩니다.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>언제 다운로드할 수 있나요?</h3>
+        <p>아직 공개 빌드는 없습니다. GitHub에서 Kiln 조직을 팔로우하면 첫 프리뷰가 준비됐을 때 알 수 있습니다.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>Firestorm을 그만 써야 하나요?</h3>
+        <p>아니요. Kiln은 설치 폴더, 설정, 캐시를 따로 쓰기 때문에 Firestorm이나 공식 뷰어와 함께 실행됩니다.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>Blender는 여전히 필요한가요?</h3>
+        <p>큰 모델링 작업에는 필요합니다. Kiln은 업로드 사이의 수정을 맡고, Blender 연동으로 메시를 주고받습니다.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>페인팅에 업로드 비용이 드나요?</h3>
+        <p>페인팅과 미리 보기는 내 컴퓨터 안에서만 이루어집니다. 완성한 텍스처나 메시를 업로드할 때만 세컨드 라이프의 일반 업로드 비용을 냅니다.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>Kiln은 Linden Lab이 만들었나요?</h3>
+        <p>아니요. Kiln은 Linden Lab의 서드파티 뷰어 정책을 따르는 독립 서드파티 뷰어입니다. Linden Lab이 만들거나 보증한 것이 아닙니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta board" aria-labelledby="cta-title">
+    <figure class="tile cta__flank cta__flank--photo">
+      <img src="../img/japan-muromachi-period-storage-jar-tamba-ware.jpg" width="1389" height="1600" loading="lazy" alt="무로마치 시대의 단바 도기 저장 항아리. 어깨를 따라 녹색 재유가 흘러내린다.">
+    </figure>
+    <div class="tile cta__main">
+      <h2 id="cta-title">첫 소성을 함께하세요</h2>
+      <p>Kiln은 개발 중입니다. GitHub에서 조직을 팔로우하면 작업 과정을 실시간으로 보고, 첫 프리뷰 소식도 받을 수 있습니다.</p>
+      <div class="cta__actions">
+        <a class="button" href="https://github.com/kiln-viewer">GitHub에서 팔로우</a>
+        <a class="button button--ghost" href="../support/">Kiln 후원하기</a>
+      </div>
+    </div>
+    <figure class="tile cta__flank cta__flank--video">
+      <video autoplay muted loop playsinline preload="metadata" poster="../video/salt-kiln-poster.jpg" aria-label="소성 중인 가마에 소금을 던져 넣는 도공들. 불창이 주황색으로 빛난다.">
+        <source src="../video/salt-kiln.mp4" type="video/mp4">
+      </video>
+    </figure>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="blocks" role="img" aria-label="Kiln"><!-- i18n:skip -->
+    <span class="block block--k"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">K</text></svg></span><span class="block block--i"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">I</text></svg></span><span class="block block--l"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">L</text></svg></span><span class="block block--n"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">N</text></svg></span>
+  <!-- /i18n:skip --></div>
+  <div class="footer__cols">
+    <ul>
+      <li><a href="#how">작동 방식</a></li>
+      <li><a href="#tools">도구</a></li>
+      <li><a href="#about">소개</a></li>
+      <li><a href="#faq">자주 묻는 질문</a></li>
+    </ul>
+    <ul>
+      <li><a href="https://github.com/kiln-viewer">GitHub</a></li>
+      <li><a href="../support/">Kiln 후원하기</a></li>
+      <li><a href="https://github.com/kiln-viewer/feedback">버그 신고</a></li>
+      <li><a href="https://data.kilnviewer.com/data.json">릴리스 데이터</a></li>
+      <li><a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">라이선스</a></li>
+    </ul>
+    <p class="footer__legal">Kiln은 독립 프로젝트이며 Linden Lab과 제휴하거나 보증을 받지 않았습니다. Second Life는 Linden Research, Inc.의 상표입니다.</p>
+    <p class="footer__credits">Pictures: <a href="https://www.flickr.com/photos/34067077@N00/211404733">“Heat”</a> and <a href="https://www.flickr.com/photos/34067077@N00/212122091">“Kiln, Pre Firing”</a> by Martin Cathrae, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>, via Flickr; <a href="https://www.flickr.com/photos/28179929@N08/4038126664">“The Beehive Kiln in operation at the Pipe Works, Kingscourt Bricks Ltd”</a> by sludgegulper, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>, via Flickr; <a href="https://commons.wikimedia.org/w/index.php?curid=77590014">Storage jar, Tamba ware, Muromachi period</a>, Cleveland Museum of Art, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=19011811">“Jin Jun ware dish with splashed glazes”</a> by BabelStone, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=55976186">“Pot belly, where crockery is born”</a> by Edna Winti, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>; <a href="https://www.rawpixel.com/image/3305358/free-photo-image-artist-clay-pottery">“Hands create art pottery wheel”</a>, rawpixel, CC0; <a href="https://www.artic.edu/artworks/9512">Oribe-type ewer</a>, Art Institute of Chicago, CC0; video <a href="https://commons.wikimedia.org/wiki/File:Salt_kiln.webm">“Salt kiln”</a> by Margalob, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons.</p>
+  </div>
+  <div class="footer__last">
+    <p>© 2026 Kiln Viewer contributors</p>
+    <a class="button button--small" href="#top">맨 위로</a>
+  </div>
+</footer>
+
+<script src="../main.js" defer></script>
+</body>
+</html>

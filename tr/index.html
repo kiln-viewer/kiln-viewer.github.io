@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kiln — içinde stüdyo olan Second Life viewer'ı</title>
+  <meta name="description" content="Kiln, modelleme ve doku boyamanın yerleşik geldiği ücretsiz, açık kaynaklı bir Second Life viewer&#x27;ıdır. Dünyadan çıkmadan işini biçimlendir, sırla ve fırınla.">
+  <meta property="og:title" content="Kiln — içinde stüdyo olan Second Life viewer&#x27;ı">
+  <meta property="og:description" content="İşini tek bir viewer&#x27;da modelle, boya ve dünyada gör. Ücretsiz ve açık kaynak. Geliştirme aşamasında.">
+  <meta property="og:image" content="https://kilnviewer.com/img/social.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+  <meta property="og:url" content="https://kilnviewer.com/tr/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#120b09">
+  <link rel="icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <!-- i18n:hreflang -->
+  <link rel="alternate" hreflang="en" href="https://kilnviewer.com/">
+  <link rel="alternate" hreflang="da" href="https://kilnviewer.com/da/">
+  <link rel="alternate" hreflang="de" href="https://kilnviewer.com/de/">
+  <link rel="alternate" hreflang="es" href="https://kilnviewer.com/es/">
+  <link rel="alternate" hreflang="fr" href="https://kilnviewer.com/fr/">
+  <link rel="alternate" hreflang="it" href="https://kilnviewer.com/it/">
+  <link rel="alternate" hreflang="ja" href="https://kilnviewer.com/ja/">
+  <link rel="alternate" hreflang="ko" href="https://kilnviewer.com/ko/">
+  <link rel="alternate" hreflang="pl" href="https://kilnviewer.com/pl/">
+  <link rel="alternate" hreflang="pt-BR" href="https://kilnviewer.com/pt/">
+  <link rel="alternate" hreflang="ru" href="https://kilnviewer.com/ru/">
+  <link rel="alternate" hreflang="tr" href="https://kilnviewer.com/tr/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://kilnviewer.com/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://kilnviewer.com/">
+  <!-- /i18n:hreflang -->
+</head>
+<body>
+
+<header class="hero board" id="top">
+  <div class="tile band">
+    <h1 class="band__name" aria-label="Kiln, içerik üreticileri için bir Second Life viewer&#x27;ı"><span aria-hidden="true"><!-- i18n:skip -->Kiln<span class="band__rest"> viewer</span><!-- /i18n:skip --></span></h1>
+  </div>
+
+  <nav class="links" aria-label="Bölümler">
+    <a class="tile link" href="#how">Nasıl çalışır</a>
+    <a class="tile link" href="#tools">Araçlar</a>
+    <a class="tile link" href="#about">Hakkında</a>
+    <a class="tile link" href="#faq">Sorular</a>
+    <a class="tile link link--support" href="../support/">Destek</a>
+    <!-- i18n:switcher --><details class="tile lang"><summary>Türkçe</summary><ul class="lang__menu"><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../da/" hreflang="da" lang="da">Dansk</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../it/" hreflang="it" lang="it">Italiano</a></li><li><a href="../ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="../ko/" hreflang="ko" lang="ko">한국어</a></li><li><a href="../pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="../pt/" hreflang="pt-BR" lang="pt-BR">Português</a></li><li><a href="../ru/" hreflang="ru" lang="ru">Русский</a></li><li><a href="../tr/" hreflang="tr" lang="tr" aria-current="page">Türkçe</a></li><li><a href="../zh/" hreflang="zh-Hant" lang="zh-Hant">中文（繁體）</a></li></ul></details><!-- /i18n:switcher -->
+  </nav>
+
+  <div class="rails">
+    <div class="rail rail--left">
+      <figure class="tile photo photo--ui" data-rise>
+        <img src="../img/kiln-login-panel.jpg" width="580" height="1080" alt="macOS&#x27;ta Kiln giriş ekranı: kullanıcı adı ve parola alanlarının üstünde fırın simgesi ve logo yazısı.">
+        <figcaption>Kiln bugün: ilk macOS sürümü.</figcaption>
+      </figure>
+      <ul class="tile facts" data-rise>
+        <li>Ücretsiz ve açık kaynak</li>
+        <li>macOS, Windows, Linux</li>
+        <li>Resmi viewer temelinde</li>
+        <li>Mevcut viewer'ınla yan yana çalışır</li>
+        <li>Geliştiriliyor</li>
+      </ul>
+    </div>
+
+    <div class="stage">
+      <figure class="tile photo photo--hero">
+        <img class="drift" src="../img/heat.jpg" width="1023" height="682" alt="Tam ateşteki bir fırının içi: turuncu ve beyaz parlayan tuğlalar.">
+      </figure>
+      <p class="tile statement" data-rise>İçinde stüdyo olan Second Life viewer'ı: dünyadan çıkmadan işini biçimlendir, boya ve fırınla.</p>
+    </div>
+
+    <div class="rail rail--right">
+      <p class="tile swatch swatch--1" data-rise>Viewer içinde mesh düzenleme</p>
+      <p class="tile swatch swatch--2" data-rise>Nesnenin üzerinde doku boyama</p>
+      <p class="tile swatch swatch--3" data-rise>Yüklemeden önce dünyada gör</p>
+      <p class="tile swatch swatch--4" data-rise>Blender ile gidiş dönüş</p>
+      <a class="tile swatch swatch--action" href="https://github.com/kiln-viewer" data-rise>GitHub'da takip et</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="how-wrap board" id="how" aria-labelledby="how-title">
+    <h2 id="how-title" class="section-title" data-rise>Kiln'in işleyişi</h2>
+    <div class="how">
+    <div class="field field--1">
+      <figure class="field__photo"><img src="../img/hands-create-art-pottery-wheel.jpg" width="1024" height="613" loading="lazy" alt="Çömlekçi çarkında iki elin arasında yükselen ıslak kil."></figure>
+      <h3 class="field__stage" data-rise>Biçim</h3>
+      <div class="card" data-ui data-rise>
+        <p class="card__name">Kupa, taş seramik</p>
+        <dl><div><dt>Mesh</dt><dd>1.184 üçgen</dd></div><div><dt>UV haritası</dt><dd>Henüz yok</dd></div><div><dt>Doku</dt><dd>Yok</dd></div></dl>
+        <p class="card__state">Biçimlendiriliyor</p>
+      </div>
+      <p class="field__clause" data-rise>Önce onu durduğu yerde biçimlendir.</p>
+    </div>
+    <div class="field field--2">
+      <figure class="field__photo"><img src="../img/oribe-type-ewer.jpg" width="1280" height="1600" loading="lazy" alt="Yüzeyi boyalı panellere bölünmüş bir Oribe ibriği."></figure>
+      <h3 class="field__stage" data-rise>Açılım</h3>
+      <div class="card" data-ui data-rise>
+        <p class="card__name">Kupa, taş seramik</p>
+        <dl><div><dt>Mesh</dt><dd>1.184 üçgen</dd></div><div><dt>UV haritası</dt><dd>3 ada, %92 kullanımda</dd></div><div><dt>Dikişler</dt><dd>14 kenar</dd></div></dl>
+        <p class="card__state">Açıldı</p>
+      </div>
+      <p class="field__clause" data-rise>Sonra düz aç ve dikişleri işaretle.</p>
+    </div>
+    <div class="field field--3">
+      <figure class="field__photo"><img src="../img/jin-jun-ware-dish-with-splashed-glazes.jpg" width="1600" height="1592" loading="lazy" alt="Mor lekeli açık mavi sırlı bir Jun tabağı."></figure>
+      <h3 class="field__stage" data-rise>Sır</h3>
+      <div class="card" data-ui data-rise>
+        <p class="card__name">Kupa, taş seramik</p>
+        <dl><div><dt>Temel renk</dt><dd>1024 × 1024</dd></div><div><dt>Katmanlar</dt><dd>Kil, turkuaz sır, ağız</dd></div><div><dt>Pürüzlülük</dt><dd>0.35</dd></div></dl>
+        <p class="card__state">Sırlandı</p>
+      </div>
+      <p class="field__clause" data-rise>Sonra sırrı doğrudan kupanın üstüne boya.</p>
+    </div>
+    <div class="field field--4">
+      <figure class="field__photo"><img src="../img/kiln-pre-firing.jpg" width="1024" height="683" loading="lazy" alt="Tuğla bir fırının içinde raflara dizilmiş, pişmeye hazır çömlekler."></figure>
+      <h3 class="field__stage" data-rise>Fırın</h3>
+      <div class="card" data-ui data-rise>
+        <p class="card__name">Kupa, taş seramik</p>
+        <dl><div><dt>LOD'lar</dt><dd>4/4 oluşturuldu</dd></div><div><dt>Fizik</dt><dd>Dışbükey zarf</dd></div><div><dt>Land impact</dt><dd>1</dd></div></dl>
+        <p class="card__state card__state--done">Pişti, dünyada</p>
+      </div>
+      <p class="field__clause" data-rise>Sonra fırınla ve masaya koy.</p>
+    </div>
+    </div>
+  </section>
+
+  <section class="tools board" id="tools" aria-labelledby="tools-title">
+    <h2 id="tools-title" class="section-title" data-rise>Fırına neler girer</h2>
+    <div class="cells">
+
+      <article class="cell cell--frag-top cell--live" data-rise>
+        <div class="frag frag--paint" data-ui>
+          <div class="paint">
+            <canvas class="paint__tile" width="560" height="400" aria-label="Üzerine boya yapabileceğin bir bisküvi test karosu"></canvas>
+            <noscript><p class="paint__fallback">Karoyu boyamak için JavaScript'i aç.</p></noscript>
+          </div>
+          <div class="paint__bar">
+            <div class="paint__glazes" role="radiogroup" aria-label="Sır">
+              <button type="button" role="radio" aria-checked="true" data-glaze="#2bb3a6" style="--g:#2bb3a6"><span class="sr">Turkuaz</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#9cc5a8" style="--g:#9cc5a8"><span class="sr">Seladon</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#5a2e1a" style="--g:#5a2e1a"><span class="sr">Tenmoku</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#efe2cf" style="--g:#efe2cf"><span class="sr">Shino</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#b0302a" style="--g:#b0302a"><span class="sr">Bakır kırmızısı</span></button>
+            </div>
+            <button type="button" class="paint__fire">Fırınla</button>
+            <button type="button" class="paint__clear">Sil</button>
+          </div>
+        </div>
+        <div class="cell__text">
+          <h3>Doku boyama</h3>
+          <p>Dünyada doğrudan yüzeyin üstüne, katman katman temel renk, pürüzlülük ve ışıma ile boya. Test karosunda dene.</p>
+          <p class="status">Geliştiriliyor</p>
+        </div>
+      </article>
+
+      <article class="cell cell--text-top" data-rise>
+        <div class="cell__text">
+          <h3>Mesh düzenleme</h3>
+          <p>Dünyadaki nesnede köşe, kenar ya da yüzleri seç; taşı, ekstrüde et ya da kes.</p>
+          <p class="status">Geliştiriliyor</p>
+        </div>
+        <div class="frag frag--modes" data-ui>
+          <div class="seg" role="group" aria-label="Seçim modu (örnek)">
+            <span>Köşe</span><span>Kenar</span><span class="is-on">Yüz</span>
+          </div>
+          <div class="ops">
+            <span>Ekstrüde</span><span>İçe ekle</span><span>Döngü kesme</span><span>Pah kırma</span>
+          </div>
+          <p class="frag__note">12 yüz seçildi</p>
+        </div>
+      </article>
+
+      <article class="cell cell--text-top" data-rise>
+        <div class="cell__text">
+          <h3>UV düzenleyici</h3>
+          <p>Çalışırken açılımı yap, paketle ve dikişleri ayrı bir programda değil, doğrudan nesnenin üzerinde gör.</p>
+          <p class="status">Planlandı</p>
+        </div>
+        <div class="frag frag--uv" data-ui>
+          <svg viewBox="0 0 200 200" role="img" aria-label="Bir kareye paketlenmiş üç UV adası">
+            <rect x="1" y="1" width="198" height="198" class="uv__space"/>
+            <path class="uv__island uv__island--a" d="M12 14h112v58H12z"/>
+            <path class="uv__island uv__island--b" d="M12 82h176v58H12z"/>
+            <path class="uv__island uv__island--c" d="M134 14h54v58h-54z"/>
+            <circle class="uv__island uv__island--d" cx="58" cy="168" r="22"/>
+          </svg>
+          <p class="frag__note">3 ada · alanın %92'si kullanımda</p>
+        </div>
+      </article>
+
+      <article class="cell cell--frag-top" data-rise>
+        <div class="frag frag--lod" data-ui>
+          <table>
+            <caption class="sr">Örnek kupanın detay seviyeleri</caption>
+            <thead><tr><th scope="col">Seviye</th><th scope="col">Üçgen</th></tr></thead>
+            <tbody>
+              <tr><td>Yüksek</td><td>1,184</td></tr>
+              <tr><td>Orta</td><td>412</td></tr>
+              <tr><td>Düşük</td><td>128</td></tr>
+              <tr><td>En düşük</td><td>36</td></tr>
+            </tbody>
+          </table>
+          <p class="frag__note">Land impact 1</p>
+        </div>
+        <div class="cell__text">
+          <h3>LOD ve fizik</h3>
+          <p>Dört detay seviyesinin hepsini ve fizik şeklini oluştur, yükleme ücretini ödemeden önce land impact'i gör.</p>
+          <p class="status">Planlandı</p>
+        </div>
+      </article>
+
+      <article class="cell cell--text-top" data-rise>
+        <div class="cell__text">
+          <h3>Yüklemeden önce dene</h3>
+          <p>Çalışmanı kendi dokularınla yerel olarak giy ve rezle; tam istediğin gibi olana kadar. Yalnızca bir kez, en sonda yükle.</p>
+          <p class="status">Planlandı</p>
+        </div>
+        <div class="frag frag--local" data-ui>
+          <div class="row"><span>Dünyada önizleme</span><span class="switch is-on" aria-hidden="true"></span></div>
+          <div class="row"><span>Doku</span><span>cup_glaze.png, yerel</span></div>
+          <div class="row"><span>Şu ana kadar harcanan</span><span>L$0</span></div>
+        </div>
+      </article>
+
+      <article class="cell cell--frag-top" data-rise>
+        <div class="frag frag--blender" data-ui>
+          <p class="pill-row"><span class="dot" aria-hidden="true"></span>Blender bağlı</p>
+          <p class="frag__big">cup_stoneware.glb</p>
+          <p class="frag__note">glTF 2.0 · 12 sn önce eşitlendi</p>
+          <span class="frag__btn">Blender'a gönder</span>
+        </div>
+        <div class="cell__text">
+          <h3>Blender bağlantısı</h3>
+          <p>Büyük işler için mesh'i elle dışa aktarmadan glTF olarak Blender'a gönder ve geri al.</p>
+          <p class="status">Planlandı</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Biçimlendir</span><img src="../img/kiln-pre-firing.jpg" width="1024" height="683" alt="">
+      <span>Boya</span><img src="../img/jin-jun-ware-dish-with-splashed-glazes.jpg" width="1600" height="1592" alt="">
+      <span>Dünyada fırınla</span><img src="../img/pot-belly-where-crockery-is-born-18793189726.jpg" width="1600" height="1067" alt="">
+      <span>Biçimlendir</span><img src="../img/kiln-pre-firing.jpg" width="1024" height="683" alt="">
+      <span>Boya</span><img src="../img/jin-jun-ware-dish-with-splashed-glazes.jpg" width="1600" height="1592" alt="">
+      <span>Dünyada fırınla</span><img src="../img/pot-belly-where-crockery-is-born-18793189726.jpg" width="1600" height="1067" alt="">
+    </div>
+  </div>
+
+  <section class="about board" id="about" aria-labelledby="about-title">
+    <h2 id="about-title" class="section-title" data-rise>Resmi viewer temelinde</h2>
+    <p class="about__lead" data-rise>Kiln, Linden Lab'in kendi viewer'ından yola çıkar ve onun sürümlerini takip eder; böylece yeni Second Life özellikleri her birleştirmeyle gelir. Kendi ayarlarını ve önbelleğini tutar, Firestorm'un ya da resmi viewer'ın yanında çalışır.</p>
+    <div class="about__tiles">
+      <figure class="tile about__photo" data-rise>
+        <img src="../img/the-beehive-kiln-in-operation-at-the.jpg" width="937" height="631" loading="lazy" alt="Tuğla pişiren kubbeli bir arı kovanı fırını, arkasında yüksek bir baca.">
+        <p class="about__note">Fırın, biçimlenmiş kil ile ıslak sırrın tek bir bitmiş parçaya dönüştüğü yerdir. Kiln bu adımı viewer'ın içine taşıyor.</p>
+      </figure>
+      <div class="about__side">
+        <div class="tile about__mark" data-rise>
+          <img src="../img/kiln-icon.png" width="512" height="512" loading="lazy" alt="Kiln simgesi: kubbesinden turkuaz sır akan, kapısında alev olan kilden bir fırın.">
+        </div>
+        <dl class="about__facts" data-rise>
+          <div><dt>Temeli</dt><dd>Linden Lab viewer 26.4</dd></div>
+          <div><dt>Lisans</dt><dd>LGPL-2.1</dd></div>
+          <div><dt>Platformlar</dt><dd>macOS, Windows, Linux</dd></div>
+          <div><dt>Durum</dt><dd>Geliştiriliyor</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq board" id="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="section-title" data-rise>Sorular</h2>
+    <div class="qa-list">
+      <div class="qa" data-rise>
+        <h3>Kiln ücretsiz mi?</h3>
+        <p>Evet. Kiln ücretsiz ve kaynak kodu, üzerine kurulduğu viewer ile aynı lisans olan LGPL-2.1 altında yayımlanıyor.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>Ne zaman indirebilirim?</h3>
+        <p>Henüz herkese açık bir sürüm yok. İlk önizleme hazır olduğunda haberin olsun diye GitHub'da Kiln organizasyonunu takip et.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>Firestorm'u bırakmam gerekiyor mu?</h3>
+        <p>Hayır. Kiln'in kendi kurulum klasörü, ayarları ve önbelleği var; bu yüzden Firestorm'un ya da resmi viewer'ın yanında çalışır.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>Blender'a hâlâ ihtiyacım var mı?</h3>
+        <p>Büyük modelleme işleri için evet. Kiln yüklemeler arasında yaptığın değişiklikleri karşılar, Blender bağlantısı da mesh'i oraya taşıyıp geri getirir.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>Boyamak yükleme ücretine tabi mi?</h3>
+        <p>Boyama ve önizleme senin bilgisayarında kalır. Second Life'ın olağan ücretini yalnızca bitmiş dokuyu ya da mesh'i yüklediğinde ödersin.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>Kiln'i Linden Lab mi yapıyor?</h3>
+        <p>Hayır. Kiln, Linden Lab'in Third Party Viewer Policy'sine uygun olarak geliştirilen bağımsız bir üçüncü taraf viewer'dır. Linden Lab tarafından yapılmamış ve onaylanmamıştır.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta board" aria-labelledby="cta-title">
+    <figure class="tile cta__flank cta__flank--photo">
+      <img src="../img/japan-muromachi-period-storage-jar-tamba-ware.jpg" width="1389" height="1600" loading="lazy" alt="Muromachi döneminden bir Tamba saklama küpü; yeşil kül sırrı omzundan aşağı akıyor.">
+    </figure>
+    <div class="tile cta__main">
+      <h2 id="cta-title">İlk fırınlamada orada ol</h2>
+      <p>Kiln geliştirme aşamasında. Çalışmayı canlı izlemek ve ilk önizleme çıktığında haberdar olmak için GitHub'da organizasyonu takip et.</p>
+      <div class="cta__actions">
+        <a class="button" href="https://github.com/kiln-viewer">GitHub'da takip et</a>
+        <a class="button button--ghost" href="../support/">Kiln'i destekle</a>
+      </div>
+    </div>
+    <figure class="tile cta__flank cta__flank--video">
+      <video autoplay muted loop playsinline preload="metadata" poster="../video/salt-kiln-poster.jpg" aria-label="Yanan bir fırına tuz atan çömlekçiler; gözetleme deliği turuncu parlıyor.">
+        <source src="../video/salt-kiln.mp4" type="video/mp4">
+      </video>
+    </figure>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="blocks" role="img" aria-label="Kiln"><!-- i18n:skip -->
+    <span class="block block--k"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">K</text></svg></span><span class="block block--i"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">I</text></svg></span><span class="block block--l"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">L</text></svg></span><span class="block block--n"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">N</text></svg></span>
+  <!-- /i18n:skip --></div>
+  <div class="footer__cols">
+    <ul>
+      <li><a href="#how">Nasıl çalışır</a></li>
+      <li><a href="#tools">Araçlar</a></li>
+      <li><a href="#about">Hakkında</a></li>
+      <li><a href="#faq">Sorular</a></li>
+    </ul>
+    <ul>
+      <li><a href="https://github.com/kiln-viewer">GitHub</a></li>
+      <li><a href="../support/">Kiln'i destekle</a></li>
+      <li><a href="https://github.com/kiln-viewer/feedback">Hata bildir</a></li>
+      <li><a href="https://data.kilnviewer.com/data.json">Sürüm bilgileri</a></li>
+      <li><a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">Lisans</a></li>
+    </ul>
+    <p class="footer__legal">Kiln bağımsız bir projedir; Linden Lab ile bağlantılı değildir ve Linden Lab tarafından onaylanmamıştır. Second Life, Linden Research, Inc.'in ticari markasıdır.</p>
+    <p class="footer__credits">Pictures: <a href="https://www.flickr.com/photos/34067077@N00/211404733">“Heat”</a> and <a href="https://www.flickr.com/photos/34067077@N00/212122091">“Kiln, Pre Firing”</a> by Martin Cathrae, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>, via Flickr; <a href="https://www.flickr.com/photos/28179929@N08/4038126664">“The Beehive Kiln in operation at the Pipe Works, Kingscourt Bricks Ltd”</a> by sludgegulper, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>, via Flickr; <a href="https://commons.wikimedia.org/w/index.php?curid=77590014">Storage jar, Tamba ware, Muromachi period</a>, Cleveland Museum of Art, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=19011811">“Jin Jun ware dish with splashed glazes”</a> by BabelStone, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=55976186">“Pot belly, where crockery is born”</a> by Edna Winti, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>; <a href="https://www.rawpixel.com/image/3305358/free-photo-image-artist-clay-pottery">“Hands create art pottery wheel”</a>, rawpixel, CC0; <a href="https://www.artic.edu/artworks/9512">Oribe-type ewer</a>, Art Institute of Chicago, CC0; video <a href="https://commons.wikimedia.org/wiki/File:Salt_kiln.webm">“Salt kiln”</a> by Margalob, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons.</p>
+  </div>
+  <div class="footer__last">
+    <p>© 2026 Kiln Viewer katkıda bulunanları</p>
+    <a class="button button--small" href="#top">Başa dön</a>
+  </div>
+</footer>
+
+<script src="../main.js" defer></script>
+</body>
+</html>

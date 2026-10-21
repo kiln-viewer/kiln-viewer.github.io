@@ -20,12 +20,28 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <!-- i18n:hreflang -->
+  <link rel="alternate" hreflang="en" href="https://kilnviewer.com/">
+  <link rel="alternate" hreflang="da" href="https://kilnviewer.com/da/">
+  <link rel="alternate" hreflang="de" href="https://kilnviewer.com/de/">
+  <link rel="alternate" hreflang="es" href="https://kilnviewer.com/es/">
+  <link rel="alternate" hreflang="fr" href="https://kilnviewer.com/fr/">
+  <link rel="alternate" hreflang="it" href="https://kilnviewer.com/it/">
+  <link rel="alternate" hreflang="ja" href="https://kilnviewer.com/ja/">
+  <link rel="alternate" hreflang="ko" href="https://kilnviewer.com/ko/">
+  <link rel="alternate" hreflang="pl" href="https://kilnviewer.com/pl/">
+  <link rel="alternate" hreflang="pt-BR" href="https://kilnviewer.com/pt/">
+  <link rel="alternate" hreflang="ru" href="https://kilnviewer.com/ru/">
+  <link rel="alternate" hreflang="tr" href="https://kilnviewer.com/tr/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://kilnviewer.com/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://kilnviewer.com/">
+  <!-- /i18n:hreflang -->
 </head>
 <body>
 
 <header class="hero board" id="top">
   <div class="tile band">
-    <h1 class="band__name" aria-label="Kiln, a Second Life viewer for creators"><span aria-hidden="true">Kiln<span class="band__rest"> viewer</span></span></h1>
+    <h1 class="band__name" aria-label="Kiln, a Second Life viewer for creators"><span aria-hidden="true"><!-- i18n:skip -->Kiln<span class="band__rest"> viewer</span><!-- /i18n:skip --></span></h1>
   </div>
 
   <nav class="links" aria-label="Sections">
@@ -33,6 +49,8 @@
     <a class="tile link" href="#tools">Tools</a>
     <a class="tile link" href="#about">About</a>
     <a class="tile link" href="#faq">Questions</a>
+    <a class="tile link link--support" href="support/">Support</a>
+    <!-- i18n:switcher --><details class="tile lang"><summary>English</summary><ul class="lang__menu"><li><a href="" hreflang="en" lang="en" aria-current="page">English</a></li><li><a href="da/" hreflang="da" lang="da">Dansk</a></li><li><a href="de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="es/" hreflang="es" lang="es">Español</a></li><li><a href="fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="it/" hreflang="it" lang="it">Italiano</a></li><li><a href="ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="ko/" hreflang="ko" lang="ko">한국어</a></li><li><a href="pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="pt/" hreflang="pt-BR" lang="pt-BR">Português</a></li><li><a href="ru/" hreflang="ru" lang="ru">Русский</a></li><li><a href="tr/" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="zh/" hreflang="zh-Hant" lang="zh-Hant">中文（繁體）</a></li></ul></details><!-- /i18n:switcher -->
   </nav>
 
   <div class="rails">
@@ -297,10 +315,13 @@
     <figure class="tile cta__flank cta__flank--photo">
       <img src="img/japan-muromachi-period-storage-jar-tamba-ware.jpg" width="1389" height="1600" loading="lazy" alt="A Tamba ware storage jar from the Muromachi period, its green ash glaze running down the shoulder.">
     </figure>
-    <div class="tile cta__main" data-rise>
+    <div class="tile cta__main">
       <h2 id="cta-title">Be there for the first firing</h2>
       <p>Kiln is in development. Follow the organisation on GitHub to see the work as it happens and hear when the first preview is out.</p>
-      <a class="button" href="https://github.com/kiln-viewer">Follow on GitHub</a>
+      <div class="cta__actions">
+        <a class="button" href="https://github.com/kiln-viewer">Follow on GitHub</a>
+        <a class="button button--ghost" href="support/">Support Kiln</a>
+      </div>
     </div>
     <figure class="tile cta__flank cta__flank--video">
       <video autoplay muted loop playsinline preload="metadata" poster="video/salt-kiln-poster.jpg" aria-label="Potters throwing salt into a firing kiln; the spy hole glows orange.">
@@ -312,9 +333,9 @@
 </main>
 
 <footer class="footer">
-  <div class="blocks" role="img" aria-label="Kiln">
+  <div class="blocks" role="img" aria-label="Kiln"><!-- i18n:skip -->
     <span class="block block--k"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">K</text></svg></span><span class="block block--i"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">I</text></svg></span><span class="block block--l"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">L</text></svg></span><span class="block block--n"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">N</text></svg></span>
-  </div>
+  <!-- /i18n:skip --></div>
   <div class="footer__cols">
     <ul>
       <li><a href="#how">How it works</a></li>

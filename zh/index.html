@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kiln — 內建工作室的 Second Life 瀏覽器</title>
+  <meta name="description" content="Kiln 是免費開源的 Second Life 瀏覽器，內建建模與材質繪製。不必離開虛擬世界，就能塑形、上釉、燒製作品。">
+  <meta property="og:title" content="Kiln — 內建工作室的 Second Life 瀏覽器">
+  <meta property="og:description" content="建模、上色、在虛擬世界中查看作品，一個瀏覽器全包。免費開源，開發中。">
+  <meta property="og:image" content="https://kilnviewer.com/img/social.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+  <meta property="og:url" content="https://kilnviewer.com/zh/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#120b09">
+  <link rel="icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <!-- i18n:hreflang -->
+  <link rel="alternate" hreflang="en" href="https://kilnviewer.com/">
+  <link rel="alternate" hreflang="da" href="https://kilnviewer.com/da/">
+  <link rel="alternate" hreflang="de" href="https://kilnviewer.com/de/">
+  <link rel="alternate" hreflang="es" href="https://kilnviewer.com/es/">
+  <link rel="alternate" hreflang="fr" href="https://kilnviewer.com/fr/">
+  <link rel="alternate" hreflang="it" href="https://kilnviewer.com/it/">
+  <link rel="alternate" hreflang="ja" href="https://kilnviewer.com/ja/">
+  <link rel="alternate" hreflang="ko" href="https://kilnviewer.com/ko/">
+  <link rel="alternate" hreflang="pl" href="https://kilnviewer.com/pl/">
+  <link rel="alternate" hreflang="pt-BR" href="https://kilnviewer.com/pt/">
+  <link rel="alternate" hreflang="ru" href="https://kilnviewer.com/ru/">
+  <link rel="alternate" hreflang="tr" href="https://kilnviewer.com/tr/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://kilnviewer.com/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://kilnviewer.com/">
+  <!-- /i18n:hreflang -->
+</head>
+<body>
+
+<header class="hero board" id="top">
+  <div class="tile band">
+    <h1 class="band__name" aria-label="Kiln，為創作者打造的 Second Life 瀏覽器"><span aria-hidden="true"><!-- i18n:skip -->Kiln<span class="band__rest"> viewer</span><!-- /i18n:skip --></span></h1>
+  </div>
+
+  <nav class="links" aria-label="章節">
+    <a class="tile link" href="#how">運作方式</a>
+    <a class="tile link" href="#tools">工具</a>
+    <a class="tile link" href="#about">關於</a>
+    <a class="tile link" href="#faq">常見問題</a>
+    <a class="tile link link--support" href="../support/">贊助</a>
+    <!-- i18n:switcher --><details class="tile lang"><summary>中文（繁體）</summary><ul class="lang__menu"><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../da/" hreflang="da" lang="da">Dansk</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../it/" hreflang="it" lang="it">Italiano</a></li><li><a href="../ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="../ko/" hreflang="ko" lang="ko">한국어</a></li><li><a href="../pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="../pt/" hreflang="pt-BR" lang="pt-BR">Português</a></li><li><a href="../ru/" hreflang="ru" lang="ru">Русский</a></li><li><a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="../zh/" hreflang="zh-Hant" lang="zh-Hant" aria-current="page">中文（繁體）</a></li></ul></details><!-- /i18n:switcher -->
+  </nav>
+
+  <div class="rails">
+    <div class="rail rail--left">
+      <figure class="tile photo photo--ui" data-rise>
+        <img src="../img/kiln-login-panel.jpg" width="580" height="1080" alt="macOS 上的 Kiln 登入畫面：使用者名稱與密碼欄位上方是窯的圖示與文字標誌。">
+        <figcaption>Kiln 現況：第一個 macOS 版本。</figcaption>
+      </figure>
+      <ul class="tile facts" data-rise>
+        <li>免費開源</li>
+        <li>macOS、Windows、Linux</li>
+        <li>以官方瀏覽器為基礎</li>
+        <li>可與現有瀏覽器並用</li>
+        <li>開發中</li>
+      </ul>
+    </div>
+
+    <div class="stage">
+      <figure class="tile photo photo--hero">
+        <img class="drift" src="../img/heat.jpg" width="1023" height="682" alt="全速燒製中的窯內：磚塊發出橘色與白色的光。">
+      </figure>
+      <p class="tile statement" data-rise>內建工作室的 Second Life 瀏覽器：不必離開虛擬世界，就能塑形、上色、燒製作品。</p>
+    </div>
+
+    <div class="rail rail--right">
+      <p class="tile swatch swatch--1" data-rise>在瀏覽器中編輯網格</p>
+      <p class="tile swatch swatch--2" data-rise>直接在物件上繪製材質</p>
+      <p class="tile swatch swatch--3" data-rise>上傳前先在虛擬世界中查看</p>
+      <p class="tile swatch swatch--4" data-rise>與 Blender 雙向往返</p>
+      <a class="tile swatch swatch--action" href="https://github.com/kiln-viewer" data-rise>在 GitHub 上追蹤</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="how-wrap board" id="how" aria-labelledby="how-title">
+    <h2 id="how-title" class="section-title" data-rise>Kiln 如何運作</h2>
+    <div class="how">
+    <div class="field field--1">
+      <figure class="field__photo"><img src="../img/hands-create-art-pottery-wheel.jpg" width="1024" height="613" loading="lazy" alt="拉坯機上，濕潤的陶土在雙手間升起。"></figure>
+      <h3 class="field__stage" data-rise>塑形</h3>
+      <div class="card" data-ui data-rise>
+        <p class="card__name">杯子，炻器</p>
+        <dl><div><dt>網格</dt><dd>1,184 個三角面</dd></div><div><dt>UV 貼圖</dt><dd>尚無</dd></div><div><dt>材質</dt><dd>無</dd></div></dl>
+        <p class="card__state">塑形中</p>
+      </div>
+      <p class="field__clause" data-rise>首先，就地把形狀塑好。</p>
+    </div>
+    <div class="field field--2">
+      <figure class="field__photo"><img src="../img/oribe-type-ewer.jpg" width="1280" height="1600" loading="lazy" alt="表面分成數個彩繪區塊的織部水注。"></figure>
+      <h3 class="field__stage" data-rise>展開</h3>
+      <div class="card" data-ui data-rise>
+        <p class="card__name">杯子，炻器</p>
+        <dl><div><dt>網格</dt><dd>1,184 個三角面</dd></div><div><dt>UV 貼圖</dt><dd>3 個島，使用 92%</dd></div><div><dt>接縫</dt><dd>14 條邊</dd></div></dl>
+        <p class="card__state">已展開</p>
+      </div>
+      <p class="field__clause" data-rise>接著，攤平展開並標出接縫。</p>
+    </div>
+    <div class="field field--3">
+      <figure class="field__photo"><img src="../img/jin-jun-ware-dish-with-splashed-glazes.jpg" width="1600" height="1592" loading="lazy" alt="淡藍釉面潑灑紫斑的鈞窯盤。"></figure>
+      <h3 class="field__stage" data-rise>上釉</h3>
+      <div class="card" data-ui data-rise>
+        <p class="card__name">杯子，炻器</p>
+        <dl><div><dt>基本色</dt><dd>1024 × 1024</dd></div><div><dt>圖層</dt><dd>陶土、青綠釉、杯緣</dd></div><div><dt>粗糙度</dt><dd>0.35</dd></div></dl>
+        <p class="card__state">已上釉</p>
+      </div>
+      <p class="field__clause" data-rise>接著，直接在杯子上刷釉。</p>
+    </div>
+    <div class="field field--4">
+      <figure class="field__photo"><img src="../img/kiln-pre-firing.jpg" width="1024" height="683" loading="lazy" alt="磚窯內層架上堆疊著待燒的陶器。"></figure>
+      <h3 class="field__stage" data-rise>燒製</h3>
+      <div class="card" data-ui data-rise>
+        <p class="card__name">杯子，炻器</p>
+        <dl><div><dt>LOD</dt><dd>已產生 4/4 層</dd></div><div><dt>物理</dt><dd>凸包</dd></div><div><dt>土地衝擊</dt><dd>1</dd></div></dl>
+        <p class="card__state card__state--done">已燒製，於虛擬世界</p>
+      </div>
+      <p class="field__clause" data-rise>最後，燒製完成，擺上桌。</p>
+    </div>
+    </div>
+  </section>
+
+  <section class="tools board" id="tools" aria-labelledby="tools-title">
+    <h2 id="tools-title" class="section-title" data-rise>窯裡放什麼</h2>
+    <div class="cells">
+
+      <article class="cell cell--frag-top cell--live" data-rise>
+        <div class="frag frag--paint" data-ui>
+          <div class="paint">
+            <canvas class="paint__tile" width="560" height="400" aria-label="可以上色的素燒測試磁磚"></canvas>
+            <noscript><p class="paint__fallback">請開啟 JavaScript 才能在磁磚上上色。</p></noscript>
+          </div>
+          <div class="paint__bar">
+            <div class="paint__glazes" role="radiogroup" aria-label="上釉">
+              <button type="button" role="radio" aria-checked="true" data-glaze="#2bb3a6" style="--g:#2bb3a6"><span class="sr">青綠</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#9cc5a8" style="--g:#9cc5a8"><span class="sr">青瓷</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#5a2e1a" style="--g:#5a2e1a"><span class="sr">天目</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#efe2cf" style="--g:#efe2cf"><span class="sr">志野</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#b0302a" style="--g:#b0302a"><span class="sr">銅紅</span></button>
+            </div>
+            <button type="button" class="paint__fire">燒製</button>
+            <button type="button" class="paint__clear">清除</button>
+          </div>
+        </div>
+        <div class="cell__text">
+          <h3>材質繪製</h3>
+          <p>在虛擬世界中直接於面上分圖層繪製，支援基本色、粗糙度與自發光。在測試磁磚上試試看。</p>
+          <p class="status">開發中</p>
+        </div>
+      </article>
+
+      <article class="cell cell--text-top" data-rise>
+        <div class="cell__text">
+          <h3>網格編輯</h3>
+          <p>在虛擬世界中選取物件的頂點、邊或面，進行移動、擠出或切割。</p>
+          <p class="status">開發中</p>
+        </div>
+        <div class="frag frag--modes" data-ui>
+          <div class="seg" role="group" aria-label="選取模式（範例）">
+            <span>頂點</span><span>邊</span><span class="is-on">面</span>
+          </div>
+          <div class="ops">
+            <span>擠出</span><span>內縮</span><span>環切</span><span>倒角</span>
+          </div>
+          <p class="frag__note">已選取 12 個面</p>
+        </div>
+      </article>
+
+      <article class="cell cell--text-top" data-rise>
+        <div class="cell__text">
+          <h3>UV 編輯器</h3>
+          <p>一邊工作一邊在物件上展開、排列並查看接縫，不必切換到其他程式。</p>
+          <p class="status">規劃中</p>
+        </div>
+        <div class="frag frag--uv" data-ui>
+          <svg viewBox="0 0 200 200" role="img" aria-label="排列在正方形內的三個 UV 島">
+            <rect x="1" y="1" width="198" height="198" class="uv__space"/>
+            <path class="uv__island uv__island--a" d="M12 14h112v58H12z"/>
+            <path class="uv__island uv__island--b" d="M12 82h176v58H12z"/>
+            <path class="uv__island uv__island--c" d="M134 14h54v58h-54z"/>
+            <circle class="uv__island uv__island--d" cx="58" cy="168" r="22"/>
+          </svg>
+          <p class="frag__note">3 個 UV 島 · 使用 92% 空間</p>
+        </div>
+      </article>
+
+      <article class="cell cell--frag-top" data-rise>
+        <div class="frag frag--lod" data-ui>
+          <table>
+            <caption class="sr">範例杯子的細節層級</caption>
+            <thead><tr><th scope="col">層級</th><th scope="col">三角面</th></tr></thead>
+            <tbody>
+              <tr><td>高</td><td>1,184</td></tr>
+              <tr><td>中</td><td>412</td></tr>
+              <tr><td>低</td><td>128</td></tr>
+              <tr><td>最低</td><td>36</td></tr>
+            </tbody>
+          </table>
+          <p class="frag__note">土地衝擊 1</p>
+        </div>
+        <div class="cell__text">
+          <h3>LOD 與物理</h3>
+          <p>產生全部四個細節層級與物理形狀，付費上傳前就能看到土地衝擊。</p>
+          <p class="status">規劃中</p>
+        </div>
+      </article>
+
+      <article class="cell cell--text-top" data-rise>
+        <div class="cell__text">
+          <h3>上傳前先試</h3>
+          <p>用自己的材質在本機穿戴、擺放作品，直到滿意為止。最後只需上傳一次。</p>
+          <p class="status">規劃中</p>
+        </div>
+        <div class="frag frag--local" data-ui>
+          <div class="row"><span>在虛擬世界中預覽</span><span class="switch is-on" aria-hidden="true"></span></div>
+          <div class="row"><span>材質</span><span>cup_glaze.png，本機</span></div>
+          <div class="row"><span>目前花費</span><span>L$0</span></div>
+        </div>
+      </article>
+
+      <article class="cell cell--frag-top" data-rise>
+        <div class="frag frag--blender" data-ui>
+          <p class="pill-row"><span class="dot" aria-hidden="true"></span>Blender 已連線</p>
+          <p class="frag__big">cup_stoneware.glb</p>
+          <p class="frag__note">glTF 2.0 · 12 秒前同步</p>
+          <span class="frag__btn">傳送到 Blender</span>
+        </div>
+        <div class="cell__text">
+          <h3>Blender 連結</h3>
+          <p>大型工作可將網格以 glTF 傳到 Blender 再傳回，不必手動匯出。</p>
+          <p class="status">規劃中</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>塑形</span><img src="../img/kiln-pre-firing.jpg" width="1024" height="683" alt="">
+      <span>上色</span><img src="../img/jin-jun-ware-dish-with-splashed-glazes.jpg" width="1600" height="1592" alt="">
+      <span>在虛擬世界中燒製</span><img src="../img/pot-belly-where-crockery-is-born-18793189726.jpg" width="1600" height="1067" alt="">
+      <span>塑形</span><img src="../img/kiln-pre-firing.jpg" width="1024" height="683" alt="">
+      <span>上色</span><img src="../img/jin-jun-ware-dish-with-splashed-glazes.jpg" width="1600" height="1592" alt="">
+      <span>在虛擬世界中燒製</span><img src="../img/pot-belly-where-crockery-is-born-18793189726.jpg" width="1600" height="1067" alt="">
+    </div>
+  </div>
+
+  <section class="about board" id="about" aria-labelledby="about-title">
+    <h2 id="about-title" class="section-title" data-rise>以官方瀏覽器為基礎</h2>
+    <p class="about__lead" data-rise>Kiln 以 Linden Lab 官方瀏覽器為基礎並跟進其版本更新，每次合併都會帶來 Second Life 的新功能。它有獨立的設定與快取，可與 Firestorm 或官方瀏覽器並用。</p>
+    <div class="about__tiles">
+      <figure class="tile about__photo" data-rise>
+        <img src="../img/the-beehive-kiln-in-operation-at-the.jpg" width="937" height="631" loading="lazy" alt="燒製磚塊的圓頂蜂巢窯，後方矗立著高聳的煙囪。">
+        <p class="about__note">窯，是塑好的陶土與未乾的釉合而為一、成為作品的地方。Kiln 把這一步帶進了瀏覽器。</p>
+      </figure>
+      <div class="about__side">
+        <div class="tile about__mark" data-rise>
+          <img src="../img/kiln-icon.png" width="512" height="512" loading="lazy" alt="Kiln 圖示：一座陶土窯，青綠釉沿著圓頂流下，窯門內有火焰。">
+        </div>
+        <dl class="about__facts" data-rise>
+          <div><dt>基於</dt><dd>Linden Lab 瀏覽器 26.4</dd></div>
+          <div><dt>授權</dt><dd>LGPL-2.1</dd></div>
+          <div><dt>平台</dt><dd>macOS、Windows、Linux</dd></div>
+          <div><dt>狀態</dt><dd>開發中</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq board" id="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="section-title" data-rise>常見問題</h2>
+    <div class="qa-list">
+      <div class="qa" data-rise>
+        <h3>Kiln 免費嗎？</h3>
+        <p>是的。Kiln 完全免費，原始碼以 LGPL-2.1 授權釋出，與其所基於的瀏覽器相同。</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>什麼時候可以下載？</h3>
+        <p>目前還沒有公開版本。請在 GitHub 上追蹤 Kiln 組織，第一個預覽版推出時就會知道。</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>我必須放棄 Firestorm 嗎？</h3>
+        <p>不用。Kiln 有自己的安裝資料夾、設定與快取，可與 Firestorm 或官方瀏覽器並用。</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>還需要 Blender 嗎？</h3>
+        <p>大型建模工作仍需要。Kiln 負責兩次上傳之間的修改，Blender 連結則讓網格來回傳遞。</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>上色會產生上傳費用嗎？</h3>
+        <p>上色與預覽都在你的電腦上進行。只有在上傳完成的材質或網格時，才需支付 Second Life 的一般費用。</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>Kiln 是 Linden Lab 製作的嗎？</h3>
+        <p>不是。Kiln 是獨立的第三方瀏覽器，遵循 Linden Lab 的第三方瀏覽器政策開發，並非由 Linden Lab 製作或背書。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta board" aria-labelledby="cta-title">
+    <figure class="tile cta__flank cta__flank--photo">
+      <img src="../img/japan-muromachi-period-storage-jar-tamba-ware.jpg" width="1389" height="1600" loading="lazy" alt="室町時代的丹波燒儲物罐，綠色灰釉自肩部流下。">
+    </figure>
+    <div class="tile cta__main">
+      <h2 id="cta-title">一起見證第一窯</h2>
+      <p>Kiln 正在開發中。在 GitHub 上追蹤組織，即時關注進度，並在第一個預覽版推出時收到通知。</p>
+      <div class="cta__actions">
+        <a class="button" href="https://github.com/kiln-viewer">在 GitHub 上追蹤</a>
+        <a class="button button--ghost" href="../support/">贊助 Kiln</a>
+      </div>
+    </div>
+    <figure class="tile cta__flank cta__flank--video">
+      <video autoplay muted loop playsinline preload="metadata" poster="../video/salt-kiln-poster.jpg" aria-label="陶工將鹽投入燒製中的窯；觀火孔透出橘光。">
+        <source src="../video/salt-kiln.mp4" type="video/mp4">
+      </video>
+    </figure>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="blocks" role="img" aria-label="Kiln"><!-- i18n:skip -->
+    <span class="block block--k"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">K</text></svg></span><span class="block block--i"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">I</text></svg></span><span class="block block--l"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">L</text></svg></span><span class="block block--n"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">N</text></svg></span>
+  <!-- /i18n:skip --></div>
+  <div class="footer__cols">
+    <ul>
+      <li><a href="#how">運作方式</a></li>
+      <li><a href="#tools">工具</a></li>
+      <li><a href="#about">關於</a></li>
+      <li><a href="#faq">常見問題</a></li>
+    </ul>
+    <ul>
+      <li><a href="https://github.com/kiln-viewer">GitHub</a></li>
+      <li><a href="../support/">贊助 Kiln</a></li>
+      <li><a href="https://github.com/kiln-viewer/feedback">回報錯誤</a></li>
+      <li><a href="https://data.kilnviewer.com/data.json">版本資料</a></li>
+      <li><a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">授權</a></li>
+    </ul>
+    <p class="footer__legal">Kiln 為獨立專案，與 Linden Lab 無任何關聯，亦未獲其背書。Second Life 為 Linden Research, Inc. 的商標。</p>
+    <p class="footer__credits">Pictures: <a href="https://www.flickr.com/photos/34067077@N00/211404733">“Heat”</a> and <a href="https://www.flickr.com/photos/34067077@N00/212122091">“Kiln, Pre Firing”</a> by Martin Cathrae, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>, via Flickr; <a href="https://www.flickr.com/photos/28179929@N08/4038126664">“The Beehive Kiln in operation at the Pipe Works, Kingscourt Bricks Ltd”</a> by sludgegulper, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>, via Flickr; <a href="https://commons.wikimedia.org/w/index.php?curid=77590014">Storage jar, Tamba ware, Muromachi period</a>, Cleveland Museum of Art, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=19011811">“Jin Jun ware dish with splashed glazes”</a> by BabelStone, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=55976186">“Pot belly, where crockery is born”</a> by Edna Winti, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>; <a href="https://www.rawpixel.com/image/3305358/free-photo-image-artist-clay-pottery">“Hands create art pottery wheel”</a>, rawpixel, CC0; <a href="https://www.artic.edu/artworks/9512">Oribe-type ewer</a>, Art Institute of Chicago, CC0; video <a href="https://commons.wikimedia.org/wiki/File:Salt_kiln.webm">“Salt kiln”</a> by Margalob, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons.</p>
+  </div>
+  <div class="footer__last">
+    <p>© 2026 Kiln Viewer contributors</p>
+    <a class="button button--small" href="#top">回到頂端</a>
+  </div>
+</footer>
+
+<script src="../main.js" defer></script>
+</body>
+</html>

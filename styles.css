@@ -96,7 +96,8 @@ button { font: inherit; color: inherit; }
   transform: translateY(0.04em);
 }
 
-.links { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); }
+.links { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--gap); }
+.link--support { background: var(--tile-2); }
 .link {
   display: block;
   padding: 20px 22px;
@@ -383,6 +384,9 @@ button { font: inherit; color: inherit; }
 .cta__flank--photo img { width: 100%; height: 100%; object-fit: cover; object-position: 40% 35%; }
 .cta__main { grid-column: 3 / span 8; background: var(--flame); color: var(--ink-dark); padding: 40px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
 .cta__main h2 { font-size: var(--step-head); line-height: 1; font-weight: 700; letter-spacing: -0.03em; text-transform: uppercase; }
+.cta__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.button--ghost { background: #ffd2bd; color: var(--ink-dark); }
+.button--ghost:hover { background: #ffe2d4; }
 .cta__main p { margin: 16px 0 24px; font-size: var(--step-body); max-width: 52ch; }
 .cta__flank--video { grid-column: 11 / span 2; background: var(--glaze-deep); border-radius: var(--radius) 0 0 var(--radius); }
 .cta__flank--video video { width: 100%; height: 100%; object-fit: cover; object-position: 78% 50%; }
@@ -438,11 +442,13 @@ button { font: inherit; color: inherit; }
 /* ---------- Phone ---------- */
 
 @media (max-width: 680px) {
-  :root { --gap: 6px; }
+  /* Long German and Russian titles need a smaller phone size to stay within two lines. */
+  :root { --gap: 6px; --step-head: 32px; }
   .hero { grid-template-rows: 110px auto auto; min-height: 0; }
   .band__name { font-size: 26vw; }
   .band__rest { display: none; }
   .links { grid-template-columns: 1fr 1fr; }
+  .link--support { grid-column: auto; }
   .link { padding: 16px; }
   .rails { grid-template-columns: 1fr 1fr; }
   .stage { grid-column: 1 / -1; grid-row: 1; }
@@ -481,11 +487,12 @@ button { font: inherit; color: inherit; }
 
   .cta { padding: 0; gap: var(--gap); }
   .cta .tile { height: auto; }
-  .cta__main { grid-column: 1 / -1; min-height: 300px; padding: 28px; border-radius: 0; }
+  .cta__main { grid-column: 1 / -1; grid-row: 1; min-height: 300px; padding: 28px; border-radius: 0; }
   
-  .cta__main .button { align-self: stretch; text-align: center; }
-  .cta__flank--photo { grid-column: 1 / span 6; height: 120px !important; border-radius: 0 var(--radius) var(--radius) 0; }
-  .cta__flank--video { grid-column: 7 / span 6; height: 120px !important; }
+  .cta__actions { align-self: stretch; flex-direction: column; }
+  .cta__main .button { text-align: center; }
+  .cta__flank--photo { grid-column: 1 / span 6; grid-row: 2; height: 120px !important; border-radius: 0 var(--radius) var(--radius) 0; }
+  .cta__flank--video { grid-column: 7 / span 6; grid-row: 2; height: 120px !important; }
 
   .blocks { height: 22svh; min-height: 150px; }
   .footer__cols { grid-template-columns: 1fr 1fr; row-gap: 24px; }
@@ -566,4 +573,47 @@ button { font: inherit; color: inherit; }
   .support-band figure:not(.support-band__video) { aspect-ratio: 1; }
   .channel { min-height: 220px; }
   .other-help { margin-top: 120px; }
+}
+
+/* ---------- Language menu ---------- */
+
+.lang { position: relative; overflow: visible; }
+.lang summary {
+  display: block;
+  padding: 20px 22px;
+  font-size: var(--step-body);
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
+}
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary::after { content: " +"; color: var(--ink-soft); }
+.lang[open] summary::after { content: " −"; }
+.lang__menu {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 220px;
+  padding: 8px;
+  border-radius: var(--radius);
+  background: var(--tile-2);
+}
+.lang[open] .lang__menu { box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45); } /* taste-skill-ignore: only while the menu is open above the page */
+.lang__menu a { display: block; padding: 10px 12px; border-radius: 4px; text-decoration: none; }
+.lang__menu a:hover { background: var(--tile); }
+.lang__menu a[aria-current="page"] { color: var(--flame); }
+.support-head .lang { justify-self: end; min-width: 220px; }
+
+/* CJK pages keep Jost for Latin and fall back to Noto for their own script. */
+:lang(ja) body { font-family: "Jost", "Noto Sans JP", system-ui, sans-serif; }
+:lang(ko) body { font-family: "Jost", "Noto Sans KR", system-ui, sans-serif; word-break: keep-all; }
+:lang(zh-Hant) body { font-family: "Jost", "Noto Sans TC", system-ui, sans-serif; }
+/* Dense scripts read small at 14px: lift the small step and the interface fragments. */
+:lang(ja), :lang(ko), :lang(zh-Hant) { --step-small: 15px; }
+:lang(ja) .card, :lang(ja) .frag, :lang(ko) .card, :lang(ko) .frag, :lang(zh-Hant) .card, :lang(zh-Hant) .frag { font-size: 16px; }
+
+@media (max-width: 680px) {
+  .lang { grid-column: 1 / -1; }
+  .lang__menu { left: 0; right: auto; width: 100%; }
 }

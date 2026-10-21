@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kiln — Second Life-vieweren med et værksted indbygget</title>
+  <meta name="description" content="Kiln er en gratis open source-viewer til Second Life med modellering og teksturmaling indbygget. Form, glasér og brænd dit arbejde uden at forlade verdenen.">
+  <meta property="og:title" content="Kiln — Second Life-vieweren med et værksted indbygget">
+  <meta property="og:description" content="Modellér, mal og se dit arbejde in-world, i én viewer. Gratis og open source. Under udvikling.">
+  <meta property="og:image" content="https://kilnviewer.com/img/social.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+  <meta property="og:url" content="https://kilnviewer.com/da/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#120b09">
+  <link rel="icon" href="../favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <!-- i18n:hreflang -->
+  <link rel="alternate" hreflang="en" href="https://kilnviewer.com/">
+  <link rel="alternate" hreflang="da" href="https://kilnviewer.com/da/">
+  <link rel="alternate" hreflang="de" href="https://kilnviewer.com/de/">
+  <link rel="alternate" hreflang="es" href="https://kilnviewer.com/es/">
+  <link rel="alternate" hreflang="fr" href="https://kilnviewer.com/fr/">
+  <link rel="alternate" hreflang="it" href="https://kilnviewer.com/it/">
+  <link rel="alternate" hreflang="ja" href="https://kilnviewer.com/ja/">
+  <link rel="alternate" hreflang="ko" href="https://kilnviewer.com/ko/">
+  <link rel="alternate" hreflang="pl" href="https://kilnviewer.com/pl/">
+  <link rel="alternate" hreflang="pt-BR" href="https://kilnviewer.com/pt/">
+  <link rel="alternate" hreflang="ru" href="https://kilnviewer.com/ru/">
+  <link rel="alternate" hreflang="tr" href="https://kilnviewer.com/tr/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://kilnviewer.com/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://kilnviewer.com/">
+  <!-- /i18n:hreflang -->
+</head>
+<body>
+
+<header class="hero board" id="top">
+  <div class="tile band">
+    <h1 class="band__name" aria-label="Kiln, en Second Life-viewer for skabere"><span aria-hidden="true"><!-- i18n:skip -->Kiln<span class="band__rest"> viewer</span><!-- /i18n:skip --></span></h1>
+  </div>
+
+  <nav class="links" aria-label="Afsnit">
+    <a class="tile link" href="#how">Sådan virker det</a>
+    <a class="tile link" href="#tools">Værktøjer</a>
+    <a class="tile link" href="#about">Om</a>
+    <a class="tile link" href="#faq">Spørgsmål</a>
+    <a class="tile link link--support" href="../support/">Støt</a>
+    <!-- i18n:switcher --><details class="tile lang"><summary>Dansk</summary><ul class="lang__menu"><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../da/" hreflang="da" lang="da" aria-current="page">Dansk</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../it/" hreflang="it" lang="it">Italiano</a></li><li><a href="../ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="../ko/" hreflang="ko" lang="ko">한국어</a></li><li><a href="../pl/" hreflang="pl" lang="pl">Polski</a></li><li><a href="../pt/" hreflang="pt-BR" lang="pt-BR">Português</a></li><li><a href="../ru/" hreflang="ru" lang="ru">Русский</a></li><li><a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></li><li><a href="../zh/" hreflang="zh-Hant" lang="zh-Hant">中文（繁體）</a></li></ul></details><!-- /i18n:switcher -->
+  </nav>
+
+  <div class="rails">
+    <div class="rail rail--left">
+      <figure class="tile photo photo--ui" data-rise>
+        <img src="../img/kiln-login-panel.jpg" width="580" height="1080" alt="Kilns loginskærm på macOS: ovnikonet og navnetrækket over felterne til brugernavn og adgangskode.">
+        <figcaption>Kiln i dag: det første macOS-build.</figcaption>
+      </figure>
+      <ul class="tile facts" data-rise>
+        <li>Gratis og open source</li>
+        <li>macOS, Windows, Linux</li>
+        <li>På den officielle viewer</li>
+        <li>Kører side om side med din nuværende viewer</li>
+        <li>Under udvikling</li>
+      </ul>
+    </div>
+
+    <div class="stage">
+      <figure class="tile photo photo--hero">
+        <img class="drift" src="../img/heat.jpg" width="1023" height="682" alt="Inde i en keramikovn ved fuld varme: mursten, der gløder orange og hvidt.">
+      </figure>
+      <p class="tile statement" data-rise>Second Life-vieweren med et værksted indbygget: form, mal og brænd dit arbejde uden at forlade verdenen.</p>
+    </div>
+
+    <div class="rail rail--right">
+      <p class="tile swatch swatch--1" data-rise>Mesh-redigering i vieweren</p>
+      <p class="tile swatch swatch--2" data-rise>Teksturmaling direkte på objektet</p>
+      <p class="tile swatch swatch--3" data-rise>Se det in-world, før du uploader</p>
+      <p class="tile swatch swatch--4" data-rise>Frem og tilbage med Blender</p>
+      <a class="tile swatch swatch--action" href="https://github.com/kiln-viewer" data-rise>Følg med på GitHub</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="how-wrap board" id="how" aria-labelledby="how-title">
+    <h2 id="how-title" class="section-title" data-rise>Sådan virker Kiln</h2>
+    <div class="how">
+    <div class="field field--1">
+      <figure class="field__photo"><img src="../img/hands-create-art-pottery-wheel.jpg" width="1024" height="613" loading="lazy" alt="Vådt ler, der rejser sig mellem to hænder på en drejeskive."></figure>
+      <h3 class="field__stage" data-rise>Form</h3>
+      <div class="card" data-ui data-rise>
+        <p class="card__name">Kop, stentøj</p>
+        <dl><div><dt>Mesh</dt><dd>1.184 trekanter</dd></div><div><dt>UV-map</dt><dd>Ingen endnu</dd></div><div><dt>Tekstur</dt><dd>Ingen</dd></div></dl>
+        <p class="card__state">Formes</p>
+      </div>
+      <p class="field__clause" data-rise>Først formgiver du den lige der, hvor den står.</p>
+    </div>
+    <div class="field field--2">
+      <figure class="field__photo"><img src="../img/oribe-type-ewer.jpg" width="1280" height="1600" loading="lazy" alt="En Oribe-kande, hvis overflade er delt op i malede felter."></figure>
+      <h3 class="field__stage" data-rise>Udfold</h3>
+      <div class="card" data-ui data-rise>
+        <p class="card__name">Kop, stentøj</p>
+        <dl><div><dt>Mesh</dt><dd>1.184 trekanter</dd></div><div><dt>UV-map</dt><dd>3 øer, 92 % brugt</dd></div><div><dt>Sømme</dt><dd>14 kanter</dd></div></dl>
+        <p class="card__state">Udfoldet</p>
+      </div>
+      <p class="field__clause" data-rise>Så folder du den ud fladt og markerer sømmene.</p>
+    </div>
+    <div class="field field--3">
+      <figure class="field__photo"><img src="../img/jin-jun-ware-dish-with-splashed-glazes.jpg" width="1600" height="1592" loading="lazy" alt="Et Jun-fad med lyseblå glasur, stænket med lilla."></figure>
+      <h3 class="field__stage" data-rise>Glasér</h3>
+      <div class="card" data-ui data-rise>
+        <p class="card__name">Kop, stentøj</p>
+        <dl><div><dt>Grundfarve</dt><dd>1024 × 1024</dd></div><div><dt>Lag</dt><dd>Ler, blågrøn glasur, kant</dd></div><div><dt>Ruhed</dt><dd>0.35</dd></div></dl>
+        <p class="card__state">Glaseret</p>
+      </div>
+      <p class="field__clause" data-rise>Så maler du glasuren direkte på koppen.</p>
+    </div>
+    <div class="field field--4">
+      <figure class="field__photo"><img src="../img/kiln-pre-firing.jpg" width="1024" height="683" loading="lazy" alt="Krukker stablet på hylder inde i en murstensovn, klar til brænding."></figure>
+      <h3 class="field__stage" data-rise>Brænd</h3>
+      <div class="card" data-ui data-rise>
+        <p class="card__name">Kop, stentøj</p>
+        <dl><div><dt>LOD'er</dt><dd>4 af 4 genereret</dd></div><div><dt>Fysik</dt><dd>Konvekst hylster</dd></div><div><dt>Land impact</dt><dd>1</dd></div></dl>
+        <p class="card__state card__state--done">Brændt, in-world</p>
+      </div>
+      <p class="field__clause" data-rise>Så brænder du den og stiller den på bordet.</p>
+    </div>
+    </div>
+  </section>
+
+  <section class="tools board" id="tools" aria-labelledby="tools-title">
+    <h2 id="tools-title" class="section-title" data-rise>Det skal i ovnen</h2>
+    <div class="cells">
+
+      <article class="cell cell--frag-top cell--live" data-rise>
+        <div class="frag frag--paint" data-ui>
+          <div class="paint">
+            <canvas class="paint__tile" width="560" height="400" aria-label="En skrøjbrændt testflise, du kan male på"></canvas>
+            <noscript><p class="paint__fallback">Slå JavaScript til for at male flisen.</p></noscript>
+          </div>
+          <div class="paint__bar">
+            <div class="paint__glazes" role="radiogroup" aria-label="Glasér">
+              <button type="button" role="radio" aria-checked="true" data-glaze="#2bb3a6" style="--g:#2bb3a6"><span class="sr">Blågrøn</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#9cc5a8" style="--g:#9cc5a8"><span class="sr">Seladon</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#5a2e1a" style="--g:#5a2e1a"><span class="sr">Tenmoku</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#efe2cf" style="--g:#efe2cf"><span class="sr">Shino</span></button>
+              <button type="button" role="radio" aria-checked="false" data-glaze="#b0302a" style="--g:#b0302a"><span class="sr">Kobberrød</span></button>
+            </div>
+            <button type="button" class="paint__fire">Brænd den</button>
+            <button type="button" class="paint__clear">Tør af</button>
+          </div>
+        </div>
+        <div class="cell__text">
+          <h3>Teksturmaling</h3>
+          <p>Mal direkte på fladen in-world, i lag, med grundfarve, ruhed og emission. Prøv det på testflisen.</p>
+          <p class="status">Under udvikling</p>
+        </div>
+      </article>
+
+      <article class="cell cell--text-top" data-rise>
+        <div class="cell__text">
+          <h3>Mesh-redigering</h3>
+          <p>Vælg vertices, kanter eller flader på objektet in-world, og flyt, ekstrudér eller skær dem.</p>
+          <p class="status">Under udvikling</p>
+        </div>
+        <div class="frag frag--modes" data-ui>
+          <div class="seg" role="group" aria-label="Markeringstilstand (eksempel)">
+            <span>Vertex</span><span>Kant</span><span class="is-on">Flade</span>
+          </div>
+          <div class="ops">
+            <span>Ekstrudér</span><span>Indryk</span><span>Loop cut</span><span>Affas</span>
+          </div>
+          <p class="frag__note">12 flader valgt</p>
+        </div>
+      </article>
+
+      <article class="cell cell--text-top" data-rise>
+        <div class="cell__text">
+          <h3>UV-editor</h3>
+          <p>Udfold, pak og se sømmene på objektet, mens du arbejder, ikke i et separat program.</p>
+          <p class="status">Planlagt</p>
+        </div>
+        <div class="frag frag--uv" data-ui>
+          <svg viewBox="0 0 200 200" role="img" aria-label="Tre UV-øer pakket i et kvadrat">
+            <rect x="1" y="1" width="198" height="198" class="uv__space"/>
+            <path class="uv__island uv__island--a" d="M12 14h112v58H12z"/>
+            <path class="uv__island uv__island--b" d="M12 82h176v58H12z"/>
+            <path class="uv__island uv__island--c" d="M134 14h54v58h-54z"/>
+            <circle class="uv__island uv__island--d" cx="58" cy="168" r="22"/>
+          </svg>
+          <p class="frag__note">3 øer · 92 % af pladsen brugt</p>
+        </div>
+      </article>
+
+      <article class="cell cell--frag-top" data-rise>
+        <div class="frag frag--lod" data-ui>
+          <table>
+            <caption class="sr">Detaljeniveauer for eksempelkoppen</caption>
+            <thead><tr><th scope="col">Niveau</th><th scope="col">Trekanter</th></tr></thead>
+            <tbody>
+              <tr><td>Høj</td><td>1,184</td></tr>
+              <tr><td>Mellem</td><td>412</td></tr>
+              <tr><td>Lav</td><td>128</td></tr>
+              <tr><td>Lavest</td><td>36</td></tr>
+            </tbody>
+          </table>
+          <p class="frag__note">Land impact 1</p>
+        </div>
+        <div class="cell__text">
+          <h3>LOD og fysik</h3>
+          <p>Generér alle fire detaljeniveauer og fysikformen, og aflæs land impact, før du betaler for at uploade.</p>
+          <p class="status">Planlagt</p>
+        </div>
+      </article>
+
+      <article class="cell cell--text-top" data-rise>
+        <div class="cell__text">
+          <h3>Prøv før du uploader</h3>
+          <p>Bær og rez dit arbejde lokalt med dine egne teksturer, indtil det sidder lige i skabet. Upload én gang, til sidst.</p>
+          <p class="status">Planlagt</p>
+        </div>
+        <div class="frag frag--local" data-ui>
+          <div class="row"><span>Forhåndsvisning in-world</span><span class="switch is-on" aria-hidden="true"></span></div>
+          <div class="row"><span>Tekstur</span><span>cup_glaze.png, lokal</span></div>
+          <div class="row"><span>Brugt indtil videre</span><span>L$0</span></div>
+        </div>
+      </article>
+
+      <article class="cell cell--frag-top" data-rise>
+        <div class="frag frag--blender" data-ui>
+          <p class="pill-row"><span class="dot" aria-hidden="true"></span>Blender forbundet</p>
+          <p class="frag__big">cup_stoneware.glb</p>
+          <p class="frag__note">glTF 2.0 · synkroniseret for 12 s siden</p>
+          <span class="frag__btn">Send til Blender</span>
+        </div>
+        <div class="cell__text">
+          <h3>Blender-link</h3>
+          <p>Til de store opgaver sender du meshet til Blender og tilbage som glTF, uden at eksportere i hånden.</p>
+          <p class="status">Planlagt</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Form den</span><img src="../img/kiln-pre-firing.jpg" width="1024" height="683" alt="">
+      <span>Mal den</span><img src="../img/jin-jun-ware-dish-with-splashed-glazes.jpg" width="1600" height="1592" alt="">
+      <span>Brænd den in-world</span><img src="../img/pot-belly-where-crockery-is-born-18793189726.jpg" width="1600" height="1067" alt="">
+      <span>Form den</span><img src="../img/kiln-pre-firing.jpg" width="1024" height="683" alt="">
+      <span>Mal den</span><img src="../img/jin-jun-ware-dish-with-splashed-glazes.jpg" width="1600" height="1592" alt="">
+      <span>Brænd den in-world</span><img src="../img/pot-belly-where-crockery-is-born-18793189726.jpg" width="1600" height="1067" alt="">
+    </div>
+  </div>
+
+  <section class="about board" id="about" aria-labelledby="about-title">
+    <h2 id="about-title" class="section-title" data-rise>På den officielle viewer</h2>
+    <p class="about__lead" data-rise>Kiln bygger på Linden Labs egen viewer og følger dens udgivelser, så nye Second Life-funktioner kommer med ved hver merge. Kiln har sine egne indstillinger og sin egen cache og kører side om side med Firestorm eller den officielle viewer.</p>
+    <div class="about__tiles">
+      <figure class="tile about__photo" data-rise>
+        <img src="../img/the-beehive-kiln-in-operation-at-the.jpg" width="937" height="631" loading="lazy" alt="En kuplet bikubeovn, der brænder mursten, med en høj skorsten bagved.">
+        <p class="about__note">I en keramikovn bliver formet ler og våd glasur til ét færdigt stykke. Det er det trin, Kiln bringer ind i vieweren.</p>
+      </figure>
+      <div class="about__side">
+        <div class="tile about__mark" data-rise>
+          <img src="../img/kiln-icon.png" width="512" height="512" loading="lazy" alt="Kiln-ikonet: en lerovn med blågrøn glasur, der løber ned ad kuplen, og en flamme i åbningen.">
+        </div>
+        <dl class="about__facts" data-rise>
+          <div><dt>Baseret på</dt><dd>Linden Lab-viewer 26.4</dd></div>
+          <div><dt>Licens</dt><dd>LGPL-2.1</dd></div>
+          <div><dt>Platforme</dt><dd>macOS, Windows, Linux</dd></div>
+          <div><dt>Status</dt><dd>Under udvikling</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq board" id="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="section-title" data-rise>Spørgsmål</h2>
+    <div class="qa-list">
+      <div class="qa" data-rise>
+        <h3>Er Kiln gratis?</h3>
+        <p>Ja. Kiln er gratis, og kildekoden er udgivet under LGPL-2.1, samme licens som den viewer, den bygger på.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>Hvornår kan jeg downloade den?</h3>
+        <p>Der er endnu intet offentligt build. Følg Kiln-organisationen på GitHub for at høre, når den første preview er klar.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>Skal jeg droppe Firestorm?</h3>
+        <p>Nej. Kiln har sin egen installationsmappe, sine egne indstillinger og sin egen cache, så den kører side om side med Firestorm eller den officielle viewer.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>Har jeg stadig brug for Blender?</h3>
+        <p>Til store modelleringsopgaver, ja. Kiln klarer de ændringer, du laver mellem uploads, og Blender-linket fragter meshet frem og tilbage.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>Koster det uploadgebyr at male?</h3>
+        <p>Maling og forhåndsvisning foregår på din egen computer. Du betaler kun Second Lifes almindelige gebyr, når du uploader den færdige tekstur eller mesh.</p>
+      </div>
+      <div class="qa" data-rise>
+        <h3>Er Kiln lavet af Linden Lab?</h3>
+        <p>Nej. Kiln er en uafhængig tredjepartsviewer, bygget til at følge Linden Labs Third Party Viewer Policy. Den er hverken lavet eller godkendt af Linden Lab.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta board" aria-labelledby="cta-title">
+    <figure class="tile cta__flank cta__flank--photo">
+      <img src="../img/japan-muromachi-period-storage-jar-tamba-ware.jpg" width="1389" height="1600" loading="lazy" alt="En Tamba-forrådskrukke fra Muromachi-perioden, hvor grøn askeglasur løber ned over skulderen.">
+    </figure>
+    <div class="tile cta__main">
+      <h2 id="cta-title">Vær med ved første brænding</h2>
+      <p>Kiln er under udvikling. Følg organisationen på GitHub for at se arbejdet, mens det sker, og høre, når den første preview er ude.</p>
+      <div class="cta__actions">
+        <a class="button" href="https://github.com/kiln-viewer">Følg med på GitHub</a>
+        <a class="button button--ghost" href="../support/">Støt Kiln</a>
+      </div>
+    </div>
+    <figure class="tile cta__flank cta__flank--video">
+      <video autoplay muted loop playsinline preload="metadata" poster="../video/salt-kiln-poster.jpg" aria-label="Pottemagere kaster salt i en ovn under brænding; kighullet gløder orange.">
+        <source src="../video/salt-kiln.mp4" type="video/mp4">
+      </video>
+    </figure>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="blocks" role="img" aria-label="Kiln"><!-- i18n:skip -->
+    <span class="block block--k"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">K</text></svg></span><span class="block block--i"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">I</text></svg></span><span class="block block--l"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">L</text></svg></span><span class="block block--n"><svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMax meet" aria-hidden="true"><text x="50" y="94" text-anchor="middle">N</text></svg></span>
+  <!-- /i18n:skip --></div>
+  <div class="footer__cols">
+    <ul>
+      <li><a href="#how">Sådan virker det</a></li>
+      <li><a href="#tools">Værktøjer</a></li>
+      <li><a href="#about">Om</a></li>
+      <li><a href="#faq">Spørgsmål</a></li>
+    </ul>
+    <ul>
+      <li><a href="https://github.com/kiln-viewer">GitHub</a></li>
+      <li><a href="../support/">Støt Kiln</a></li>
+      <li><a href="https://github.com/kiln-viewer/feedback">Rapportér en fejl</a></li>
+      <li><a href="https://data.kilnviewer.com/data.json">Udgivelsesdata</a></li>
+      <li><a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html">Licens</a></li>
+    </ul>
+    <p class="footer__legal">Kiln er et uafhængigt projekt og er hverken tilknyttet eller godkendt af Linden Lab. Second Life er et varemærke tilhørende Linden Research, Inc.</p>
+    <p class="footer__credits">Pictures: <a href="https://www.flickr.com/photos/34067077@N00/211404733">“Heat”</a> and <a href="https://www.flickr.com/photos/34067077@N00/212122091">“Kiln, Pre Firing”</a> by Martin Cathrae, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>, via Flickr; <a href="https://www.flickr.com/photos/28179929@N08/4038126664">“The Beehive Kiln in operation at the Pipe Works, Kingscourt Bricks Ltd”</a> by sludgegulper, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>, via Flickr; <a href="https://commons.wikimedia.org/w/index.php?curid=77590014">Storage jar, Tamba ware, Muromachi period</a>, Cleveland Museum of Art, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=19011811">“Jin Jun ware dish with splashed glazes”</a> by BabelStone, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>; <a href="https://commons.wikimedia.org/w/index.php?curid=55976186">“Pot belly, where crockery is born”</a> by Edna Winti, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>; <a href="https://www.rawpixel.com/image/3305358/free-photo-image-artist-clay-pottery">“Hands create art pottery wheel”</a>, rawpixel, CC0; <a href="https://www.artic.edu/artworks/9512">Oribe-type ewer</a>, Art Institute of Chicago, CC0; video <a href="https://commons.wikimedia.org/wiki/File:Salt_kiln.webm">“Salt kiln”</a> by Margalob, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons.</p>
+  </div>
+  <div class="footer__last">
+    <p>© 2026 Kiln Viewers bidragydere</p>
+    <a class="button button--small" href="#top">Til toppen</a>
+  </div>
+</footer>
+
+<script src="../main.js" defer></script>
+</body>
+</html>
