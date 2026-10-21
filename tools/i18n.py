@@ -35,7 +35,7 @@ CJK_FONT = {"ja": "Noto+Sans+JP", "ko": "Noto+Sans+KR", "zh": "Noto+Sans+TC"}
 TEXT = re.compile(r">([^<>]+)<")
 ATTR = re.compile(r'\b(alt|aria-label|title)="([^"]+)"')
 META = re.compile(r'(<meta (?:name|property)="(?:description|og:title|og:description)" content=")([^"]+)(")')
-SKIPPED_BLOCKS = re.compile(r"<script\b.*?</script>|<style\b.*?</style>|<p class=\"footer__credits\">.*?</p>|<!-- i18n:skip -->.*?<!-- /i18n:skip -->", re.S)
+SKIPPED_BLOCKS = re.compile(r"<script\b.*?</script>|<style\b.*?</style>|<p class=\"footer__credits\">.*?</p>|<!-- i18n:skip -->.*?<!-- /i18n:skip -->|<!-- i18n:switcher -->.*?<!-- /i18n:switcher -->", re.S)
 SWITCHER = re.compile(r"<!-- i18n:switcher -->.*?<!-- /i18n:switcher -->", re.S)
 HREFLANG = re.compile(r"<!-- i18n:hreflang -->.*?<!-- /i18n:hreflang -->", re.S)
 

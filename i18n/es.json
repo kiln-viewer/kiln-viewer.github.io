@@ -148,7 +148,6 @@
  "Model, paint and see your work in-world, in one viewer. Free and open source. In development.": "Modela, pinta y ve tu obra en el mundo, en un solo visor. Gratis y de código abierto. En desarrollo.",
  "Kiln home": "Inicio de Kiln",
  "Keep the kiln lit": "Aviva el horno",
- "Kiln is free and open source, and stays that way. Sponsorship will pay for build machines, code signing and new creator tools. Until it opens, a follow helps most.": "Kiln es gratis y de código abierto, y seguirá siéndolo. El patrocinio pagará máquinas de compilación, firma de código y nuevas herramientas para creadores. Hasta que se abra, lo que más ayuda es seguir el proyecto.",
  "Four ways to give, opening with the first preview": "Cuatro formas de aportar, a partir de la primera versión preliminar",
  "GitHub Sponsors": "GitHub Sponsors",
  "Monthly or one-time, straight from your GitHub account. Best if you already follow Kiln there.": "Mensual o puntual, directamente desde tu cuenta de GitHub. Lo mejor si ya sigues a Kiln allí.",
@@ -168,5 +167,10 @@
  "A Tamba ware storage jar with green ash glaze running down its shoulder.": "Una tinaja de cerámica Tamba con esmalte de ceniza verde que se escurre por el hombro.",
  "Pots stacked on shelves inside a brick kiln before firing.": "Piezas apiladas en estantes dentro de un horno de ladrillo antes de la cocción.",
  "Kiln is free and open source. Sponsor it on GitHub, Ko-fi or Open Collective, or tip in Linden dollars in Second Life.": "Kiln es gratis y de código abierto. Patrocínalo en GitHub, Ko-fi u Open Collective, o deja una propina en dólares Linden en Second Life.",
- "Kiln is free. Help keep it that way.": "Kiln es gratis. Ayuda a que siga así."
+ "Kiln is free. Help keep it that way.": "Kiln es gratis. Ayuda a que siga así.",
+ "Pay Linden dollars to kilnviewer Resident in-world, the way you would tip a builder: open the profile and choose Pay.": "Paga dólares Linden a kilnviewer Resident en el mundo, como darías propina a un constructor: abre el perfil y elige Pagar.",
+ "Open in Second Life": "Abrir en Second Life",
+ "View profile on the web": "Ver el perfil en la web",
+ "Four ways to give": "Cuatro formas de aportar",
+ "Kiln is free and open source, and stays that way. Sponsorship pays for build machines, code signing and new creator tools. Tips in Second Life are open now; the other three open with the first preview.": "Kiln es gratuito y de código abierto, y seguirá así. Las aportaciones pagan máquinas de compilación, firma de código y nuevas herramientas para creadores. Las propinas en Second Life ya están abiertas; las otras tres se abren con la primera versión preliminar."
 }

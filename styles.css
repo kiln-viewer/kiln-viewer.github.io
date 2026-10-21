@@ -512,7 +512,10 @@ button { font: inherit; color: inherit; }
 
 /* ---------- Support page ---------- */
 
-.support-head { display: grid; gap: var(--gap); padding-top: var(--margin); }
+.support-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--gap); padding-top: var(--margin); }
+.support-head .band--link { grid-column: 1; }
+.support-head .lang { grid-column: 2; grid-row: 1; align-self: stretch; display: flex; align-items: center; }
+.support-head .support-intro { grid-column: 1 / -1; }
 .band--link { height: 170px; text-decoration: none; }
 .band--link:hover { background: #efe4d6; }
 .support-intro { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--gap); }
@@ -550,6 +553,10 @@ button { font: inherit; color: inherit; }
 .channel--2 { background: var(--clay); }
 .channel--3 { background: var(--glaze); }
 .channel--4 { background: var(--glaze-deep); color: var(--ink); }
+.channel__actions { margin-top: auto; padding-top: 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.button--dark { background: var(--ink-dark); color: var(--ink); }
+.button--dark:hover { background: #2b1a12; }
+.channel__link { font-weight: 500; }
 
 .other-help { margin-top: 160px; }
 .other-help__tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
@@ -567,6 +574,8 @@ button { font: inherit; color: inherit; }
 }
 @media (max-width: 680px) {
   .band--link { height: 110px; }
+  .support-head { grid-template-columns: 1fr; }
+  .support-head .lang { grid-column: 1; grid-row: 3; }
   .channels, .other-help__tiles { grid-template-columns: 1fr; }
   .support-band { grid-template-columns: 1fr 1fr; height: auto; }
   .support-band__video { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
@@ -603,7 +612,7 @@ button { font: inherit; color: inherit; }
 .lang__menu a { display: block; padding: 10px 12px; border-radius: 4px; text-decoration: none; }
 .lang__menu a:hover { background: var(--tile); }
 .lang__menu a[aria-current="page"] { color: var(--flame); }
-.support-head .lang { justify-self: end; min-width: 220px; }
+
 
 /* CJK pages keep Jost for Latin and fall back to Noto for their own script. */
 :lang(ja) body { font-family: "Jost", "Noto Sans JP", system-ui, sans-serif; }

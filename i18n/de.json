@@ -148,7 +148,6 @@
  "Model, paint and see your work in-world, in one viewer. Free and open source. In development.": "Modelliere, bemale und sieh deine Arbeit in-world, alles in einem Viewer. Kostenlos und Open Source. In Entwicklung.",
  "Kiln home": "Kiln-Startseite",
  "Keep the kiln lit": "Halt den Ofen heiß",
- "Kiln is free and open source, and stays that way. Sponsorship will pay for build machines, code signing and new creator tools. Until it opens, a follow helps most.": "Kiln ist kostenlos und Open Source und bleibt es auch. Sponsoring finanziert Build-Rechner, Code-Signierung und neue Werkzeuge für Creator. Bis es losgeht, hilft ein Follow am meisten.",
  "Four ways to give, opening with the first preview": "Vier Wege zu spenden, ab der ersten Preview",
  "GitHub Sponsors": "GitHub Sponsors",
  "Monthly or one-time, straight from your GitHub account. Best if you already follow Kiln there.": "Monatlich oder einmalig, direkt über dein GitHub-Konto. Ideal, wenn du Kiln dort schon folgst.",
@@ -158,7 +157,7 @@
  "Every expense is public, so you can see exactly where the money goes.": "Jede Ausgabe ist öffentlich, so siehst du genau, wohin das Geld fließt.",
  "Tip in Second Life": "Trinkgeld in Second Life",
  "Pay Linden dollars to the Kiln tip jar in-world, the way you would tip a builder.": "Wirf in-world Linden-Dollar in das Kiln-Tip-Jar, so wie du einem Builder Trinkgeld gibst.",
- "Other ways to help": "Weitere Möglichkeiten zu helfen",
+ "Other ways to help": "Anders helfen",
  "Something broken in Kiln? Tell us what happened, with your log if you can.": "Funktioniert in Kiln etwas nicht? Erzähl uns, was passiert ist, am besten mit deinem Log.",
  "Suggest a tool": "Werkzeug vorschlagen",
  "Describe what you are making and what slows you down.": "Beschreib, was du baust und was dich ausbremst.",
@@ -168,5 +167,10 @@
  "A Tamba ware storage jar with green ash glaze running down its shoulder.": "Ein Vorratsgefäß aus Tamba-Keramik, über dessen Schulter grüne Ascheglasur läuft.",
  "Pots stacked on shelves inside a brick kiln before firing.": "Vor dem Brand auf Regalen gestapelte Töpfe in einem gemauerten Brennofen.",
  "Kiln is free and open source. Sponsor it on GitHub, Ko-fi or Open Collective, or tip in Linden dollars in Second Life.": "Kiln ist kostenlos und Open Source. Unterstütze es über GitHub, Ko-fi oder Open Collective oder mit einem Trinkgeld in Linden-Dollar in Second Life.",
- "Kiln is free. Help keep it that way.": "Kiln ist kostenlos. Hilf mit, dass es so bleibt."
+ "Kiln is free. Help keep it that way.": "Kiln ist kostenlos. Hilf mit, dass es so bleibt.",
+ "Pay Linden dollars to kilnviewer Resident in-world, the way you would tip a builder: open the profile and choose Pay.": "Schick kilnviewer Resident in-world Linden-Dollar, so wie du einem Builder Trinkgeld gibst: Profil öffnen und Bezahlen wählen.",
+ "Open in Second Life": "In Second Life öffnen",
+ "View profile on the web": "Profil im Web ansehen",
+ "Four ways to give": "Vier Wege zu geben",
+ "Kiln is free and open source, and stays that way. Sponsorship pays for build machines, code signing and new creator tools. Tips in Second Life are open now; the other three open with the first preview.": "Kiln ist kostenlos und Open Source, und das bleibt so. Unterstützung bezahlt Build-Rechner, Code-Signierung und neue Werkzeuge für Creator. Trinkgeld in Second Life geht schon jetzt; die anderen drei Wege öffnen mit der ersten Preview."
 }
