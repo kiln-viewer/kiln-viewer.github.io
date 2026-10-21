@@ -350,11 +350,7 @@ button { font: inherit; color: inherit; }
 }
 .about__side { grid-column: 9 / span 4; }
 .about__mark { background: var(--glaze); aspect-ratio: 16 / 10; display: grid; place-items: center; height: auto; }
-.about__mark svg { width: 62%; height: auto; }
-.mark__body { fill: var(--clay-light); }
-.mark__door { fill: var(--ink-dark); }
-.mark__neck { fill: var(--clay); }
-.mark__flame { fill: var(--flame); }
+.about__mark img { width: 44%; height: auto; }
 .about__facts { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 16px; margin-top: 24px; font-size: var(--step-body); }
 .about__facts dt { color: var(--ink-soft); font-size: var(--step-small); }
 .about__facts dd { font-weight: 500; }
